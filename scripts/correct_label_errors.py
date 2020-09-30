@@ -21,9 +21,8 @@ class Dataset:
         with open(dataset_file) as f:
             self.dataset_lines = f.read().splitlines()
 
-        self.dataset_dfs = tp.conll_2003_to_dataframes(dataset_file,
-                                                       ["pos", "phrase", "ent"],
-                                                       [False, True, True])
+        self.dataset_dfs = tp.io.conll.conll_2003_to_dataframes(
+            dataset_file, ["pos", "phrase", "ent"], [False, True, True])
 
     @classmethod
     def _extract_begin_end_from_span(cls, span):
@@ -43,12 +42,12 @@ class Dataset:
         except ValueError:
             print(f"[WARNING] Invalid span {span}", file=sys.stderr)
             return -1, -2
-        found_df = df[df["char_span"].values.begin == begin]
+        found_df = df[df["span"].values.begin == begin]
         if found_df.shape[0] == 0:
             print(f"[WARNING] Could not find {span}", file=sys.stderr)
             return -1, -2
         begin_linum = found_df.iloc[0]['line_num']
-        found_df = df[df["char_span"].values.end == end]
+        found_df = df[df["span"].values.end == end]
         if found_df.shape[0] == 0:
             print(f"[WARNING] Could not find {span}", file=sys.stderr)
             return -1, -2
@@ -127,14 +126,11 @@ class Dataset:
         return "\n".join(self.dataset_lines)
 
 
-if __name__ == '__main__':
-
-    dataset_type = sys.argv[1]
-    dataset_file = sys.argv[2]
-    csv_patch = pd.read_csv(sys.argv[3], encoding='latin-1')
+def process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=None, target_file=None):
+    csv_patch = pd.read_csv(csv_patch_file, encoding=csv_encoding)
 
     # Only look into relevant dataset type rows
-    csv_patch = csv_patch[csv_patch['fold'] == dataset_type]
+    csv_patch = csv_patch[csv_patch['fold'] == dataset_fold]
     # Skip all None errors
     csv_patch = csv_patch[csv_patch['error_type'] != 'None']
 
@@ -155,7 +151,7 @@ if __name__ == '__main__':
                 continue
             if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
                 print(f'[WARNING] correct ent type for line {index} are empty. Skipping...',
-                    file=sys.stderr)
+                      file=sys.stderr)
                 continue
             dataset.correct_missing(corpus_span, row['correct_ent_type'], int(row['doc_offset']))
             continue
@@ -186,4 +182,23 @@ if __name__ == '__main__':
             dataset.correct_tag(row['corpus_span'], row['correct_ent_type'], int(row['doc_offset']))
             dataset.correct_span(row['corpus_span'], row['correct_span'], int(row['doc_offset']))
 
-    print(dataset.save())
+    result = dataset.save()
+
+    if target_file is not None:
+        with open(target_file, mode="w") as f:
+            f.writelines(dataset.dataset_lines)
+
+    return result
+
+
+
+if __name__ == '__main__':
+
+    dataset_fold = sys.argv[1]
+    dataset_file = sys.argv[2]
+    csv_patch_file = sys.argv[3]
+    csv_encoding = 'latin-1'
+
+    dataset = process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding)
+
+    print(dataset.to_string())
