@@ -9,6 +9,7 @@ to this directory several months down the road.
 File Name                       | Produced By    | Description
 ------------------------------- | -------------- | --------------------------------------------------------------------
 `CoNLL_2_in_gold.csv`           | `CoNLL_2.ipynb`| Entities in gold standard but not in competitors' outputs (test folds)
+`CoNLL_2_in_gold_BC.csv`        | Bryan          | Labels for `CoNLL_2_in_gold.csv`
 `CoNLL_2_not_in_gold.csv`       | `CoNLL_2.ipynb`| Entities in competitors' outputs but not in gold standard (test folds)
 `CoNLL_2_not_in_gold_FRR.csv`   | Fred           | Labels for `CoNLL_2_not_in_gold.csv`
 `CoNLL_3_in_gold.csv`           | `CoNLL_3.ipynb`| Entities in gold standard but not in model outputs (test folds)
