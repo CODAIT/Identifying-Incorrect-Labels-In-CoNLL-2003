@@ -915,7 +915,7 @@
 2601,train,315,"[1179, 1195): 'Marcos LM600 162'",MISC,Sentence,"[1175, 1191): 'GT2 Marcos LM600'",,,"Sentence boundary between ""GT2"" and ""Marcos""; also ""162"" not part of name",False,True,False,True
 2602,train,315,"[1175, 1178): 'GT2'",MISC,Sentence,"[1175, 1195): 'GT2 Marcos LM600 162'",MISC,,"Sentence boundary between ""GT2"" and ""Marcos""",False,False,False,True
 2603,train,315,,,Missing,"[257, 266): 'J.J.Lehto'",PER,,,False,True,True,True
-2604,train,315,"[787, 802): 'Gulf McLaren F!'",,Sentence,"[28, 31): 'AFL'",ORG,,"Sentence boundary before ""GTR""",False,True,False,True
+2604,train,315,"[787, 802): 'Gulf McLaren F!'",,Sentence,"[787, 806): 'Gulf McLaren F! GTR'",,"Sentence boundary before ""GTR""",False,True,False,True
 2605,train,315,"[424, 429): 'Ennea'",MISC,Sentence,"[424, 441): 'Ennea Ferrari F40'",MISC,,"Sentence boundary between ""Ennea"" and ""Ferrari""",False,False,False,True
 2606,train,315,"[506, 513): 'Harrods'",MISC,Sentence,"[506, 528): 'Harrods McLaren FI GTR'",MISC,,"Sentence boundary between ""GTR"" and ""West""",False,False,True,True
 2607,train,315,"[585, 597): 'West McLaren'",MISC,Sentence,"[585, 604): 'West McLaren F1 GTR'",MISC,,"Sentence boundary between ""McLaren"" and ""F1""",False,False,False,True
@@ -939,8 +939,8 @@
 2627,train,339,"[554, 560): 'Srutwa'",PER,Sentence,"[546, 560): 'Mariusz Srutwa'",,,Sentence boundary between first and last names,False,True,False,True
 2628,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",,Token,"[11, 21): 'AUSTRALIAN'",,,"""RULES-AFL"" treated as a single token",False,True,False,True
 2629,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",MISC,Token,"[11, 27): 'AUSTRALIAN RULES'",MISC,,"Tokenizer treated ""RULES-AFL"" as a single token",False,False,True,True
-2630,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",MISC,Token,"[28, 31): 'AFL'",MISC,,"Tokenizer treated ""RULES-AFL"" as a single token",False,False,True,True
-2631,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",,Token,"[591, 598): 'Mariner'",MISC,,"""RULES-AFL"" treated as a single token; AFL == Australian Football League",False,True,False,True
+2630,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",MISC,Token,"[28, 31): 'AFL'",ORG,,"Tokenizer treated ""RULES-AFL"" as a single token",False,False,True,True
+2631,train,343,"[11, 31): 'AUSTRALIAN RULES-AFL'",,Token,"[11, 21): 'AUSTRALIAN'",MISC,,"""RULES-AFL"" treated as a single token; AFL == Australian Football League",False,True,False,True
 2633,train,345,"[536, 541): 'Chong'",PER,Sentence,"[536, 550): 'Chong Tan Fook'",PER,,"Sentence boundary between ""Chong"" and ""Tan""",False,False,True,True
 2634,train,345,"[542, 550): 'Tan Fook'",PER,Sentence,"[536, 550): 'Chong Tan Fook'",,,Sentence boundary between first and middle names,False,True,False,True
 2635,train,346,"[207, 212): 'Lotte'",PER,Tag,"[207, 212): 'Lotte'",ORG,,Baseball team,False,False,True,True
@@ -952,7 +952,7 @@
 2641,train,347,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
 2642,train,349,"[1001, 1010): 'Cleveland'",ORG,Tag,"[1001, 1010): 'Cleveland'",LOC,,"In Cleveland, Kevin Seitzer's two-out singleï¿½",False,True,True,True
 2643,train,349,"[591, 611): 'Mariner Darren Bragg'",,Span,"[599, 611): 'Darren Bragg'",,,,False,True,False,True
-2644,train,349,"[591, 611): 'Mariner Darren Bragg'",,Both,,,,,False,False,False,True
+2644,train,349,"[591, 611): 'Mariner Darren Bragg'",,Both,"[591, 598): 'Mariner'",MISC,,,False,False,False,True
 2645,train,351,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
 2647,train,355,,,Missing,"[175, 185): 'Supercoppa'",MISC,,,False,False,True,True
 2649,train,359,"[386, 389): 'St.'",ORG,Span,"[386, 396): 'St. Gallen'",,,,False,True,True,True
@@ -1002,7 +1002,7 @@
 2704,train,458,"[1294, 1300): 'Nicola'",MISC,Wrong,,,,,False,False,True,True
 2705,train,458,"[363, 366): 'Col'",LOC,Wrong,,,,"Abbreviation for ""Colonel"". Titles not considered entities; also tagged as LOC, which is doubly wrong",False,False,False,True
 2713,train,487,,,Missing,"[911, 916): 'NYMEX'",ORG,,,False,False,True,True
-2714,train,488,,,Missing,"[224, 257): 'OCASEK GOVERNMENT OFFICE BUILDING'",LOC,,https://das.ohio.gov/Divisions/General-Services/Properties-and-Facilities/Ocasek,False,False,False,True
+2714,train,492,,,Missing,"[224, 257): 'OCASEK GOVERNMENT OFFICE BUILDING'",LOC,,https://das.ohio.gov/Divisions/General-Services/Properties-and-Facilities/Ocasek,False,False,False,True
 2715,train,488,"[822, 826): 'Sask'",LOC,Sentence,"[822, 827): 'Sask.'",LOC,,Incorrect sentence boundary after period and before comma,False,False,True,True
 2716,train,488,"[822, 826): 'Sask'",LOC,Span,"[822, 827): 'Sask.'",,,Period immediately before comma,False,True,False,True
 2717,train,488,"[889, 893): 'Alta'",,Span,"[889, 894): 'Alta.'",,,,False,True,False,True
@@ -1187,7 +1187,7 @@
 2993,train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Both,"[407, 419): 'CEDAR RAPIDS'",LOC,,,False,False,False,True
 2995,train,874,"[59, 65): 'RENNES'",ORG,Tag,"[59, 65): 'RENNES'",LOC,,,False,True,True,True
 2998,train,893,"[124, 130): 'Fowler'",PER,Span,"[118, 130): 'Wyche Fowler'",,,,False,False,True,True
-2999,train,893,"[124, 130): 'Fowler'",,Span,"[21, 24): 'T&N'",ORG,,,False,True,False,True
+2999,train,893,"[124, 130): 'Fowler'",,Span,"[118, 130): 'Wyche Fowler'",ORG,,,False,True,False,True
 3002,train,918,"[11, 24): 'INTERVIEW-T&N'",,Token,"[11, 24): 'INTERVIEW-T&N'",,,INTERVIEW-T&N' treated as a single token,False,True,False,True
 3003,train,918,"[11, 24): 'INTERVIEW-T&N'",MISC,Token,"[21, 24): 'T&N'",ORG,,"Tokenizer treated ""INVERVIEW-T&N"" as a single token",False,False,True,True
 3004,train,919,"[112, 119): 'Richter'",PER,Tag,"[112, 119): 'Richter'",MISC,,,False,False,True,True
