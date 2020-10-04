@@ -726,7 +726,6 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 ,train,686,"[136, 141): 'India'",LOC,Tag,,ORG,Cricket team,,,
 ,train,686,"[146, 155): 'Sri Lanka'",LOC,Tag,,ORG,Cricket team,,,
 5,train,686,"[170, 175): 'India'",LOC,Tag,,ORG,Cricket team,,,
-,train,686,"[170, 175): 'India'",LOC,Tag,,ORG,Cricket team,,,
 5,train,686,"[176, 185): 'A. Jadeja'",PER,None,,,,,,
 ,train,686,"[20, 25): 'INDIA'",LOC,Tag,,ORG,Cricket team,,,
 ,train,686,"[28, 37): 'SRI LANKA'",LOC,Tag,,ORG,Cricket team,,,
