@@ -503,7 +503,7 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 5,train,504,"[70, 94): 'International Philippine'",ORG,Both,"[84, 94): 'Philippine'",MISC,,,,
 2,train,506,"[200, 209): 'LA PRESSE'",ORG,None,,,,,,
 1,train,509,"[200, 209): 'THE TIMES'",ORG,None,,,,,,
-1,train,509,"[726, 736): 'L-ORIZZONT'",LOC,None,,,,,,
+1,train,509,"[726, 736): 'L-ORIZZONT'",LOC,Tag,,ORG,Name of newspaper,,,
 1,train,511,"[218, 229): 'wall Street'",ORG,Tag,,MISC,"Wall Street used to refer to New York City bond market in general; see also [939, 950): 'Wall Street'",,,
 1,train,511,"[2578, 2580): 'UK'",LOC,None,,,,,,
 0,train,511,"[3188, 3191): 'EMU'",MISC,None,,,,,,
