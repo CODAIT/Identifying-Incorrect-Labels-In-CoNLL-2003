@@ -1,0 +1,11 @@
+file_name	labelled_by	auditted_by	produced_by
+CoNLL_2_in_gold.csv           	BC	FRR	CoNLL_2.ipynb
+CoNLL_2_not_in_gold.csv       	FRR	KM	CoNLL_2.ipynb
+CoNLL_3_in_gold.csv           	ZGE	FRR	CoNLL_3.ipynb
+CoNLL_3_not_in_gold.csv       	FRR	KM	CoNLL_3.ipynb
+CoNLL_3_train_in_gold.csv     	FRR	KM	CoNLL_3.ipynb
+CoNLL_3_train_not_in_gold.csv	FRR	KM	CoNLL_3.ipynb
+CoNLL_4_in_gold.csv			CoNLL_4.ipynb
+CoNLL_4_not_in_gold.csv	FRR	KM	CoNLL_4.ipynb
+CoNLL_4_train_in_gold.csv	FRR	KM	CoNLL_4.ipynb
+CoNLL_4_train_not_in_gold.csv	FRR	KM	CoNLL_4.ipynb
