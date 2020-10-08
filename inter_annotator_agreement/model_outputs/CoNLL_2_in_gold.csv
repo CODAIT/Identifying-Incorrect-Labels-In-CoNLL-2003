@@ -1,4 +1,4 @@
-num_teams,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
+num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
 0,dev,2,"[25, 30): 'ASHES'",MISC,,,,,,,
 0,dev,15,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'",MISC,,,,,,,
 0,dev,20,"[90, 96): 'Berlin'",MISC,,,,,,,

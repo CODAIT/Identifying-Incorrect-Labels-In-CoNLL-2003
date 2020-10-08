@@ -1,4 +1,4 @@
-verified,num_teams,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corpus_ent_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
+verified,num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corpus_ent_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
 X,16,dev,20,"[90, 96): 'Berlin'",LOC,Sentence,"[90, 96): 'Berlin'",MISC,"[90, 107): 'Berlin Grand Prix'",MISC,,6/4/20 10:59,,
 X,16,dev,20,"[90, 96): 'Berlin'",LOC,Sentence,"[97, 107): 'Grand Prix'",MISC,"[90, 107): 'Berlin Grand Prix'",MISC,,,,
 X,16,dev,22,"[236, 244): 'Sarajevo'",LOC,None,,,,,"""Solidarity Meeting for Sarajevo""/MISC",,,

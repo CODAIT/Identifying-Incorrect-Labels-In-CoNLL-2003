@@ -1,4 +1,4 @@
-verified,num_teams,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
+verified,num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
 X,0,dev,2,"[25, 30): 'ASHES'",MISC,None,,,teams label as ORG ,,,
 X,0,dev,15,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'",MISC,Wrong,,, divisions of leagues not entities,,,
 X,,dev,15,"[41, 51): 'CUNNINGHAM'",PER,Token,"(33, 51]: 'RANDALL CUNNINGHAM'",,need to split on '-' "FOOTBALL-RANDALL",,,

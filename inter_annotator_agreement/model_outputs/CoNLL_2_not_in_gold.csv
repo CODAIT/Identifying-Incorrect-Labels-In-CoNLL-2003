@@ -1,4 +1,4 @@
-num_teams,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corpus_ent_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
+num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corpus_ent_type,correct_span,correct_ent_type,notes,time_started,time_stopped,time_elapsed
 16,dev,20,"[90, 96): 'Berlin'",LOC,,,,,,,,,
 16,dev,22,"[236, 244): 'Sarajevo'",LOC,,,,,,,,,
 16,dev,157,"[132, 141): 'World Cup'",MISC,,,,,,,,,
