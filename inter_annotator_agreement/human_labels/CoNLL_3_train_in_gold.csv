@@ -510,7 +510,7 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 0,train,511,"[620, 624): 'FTSE'",MISC,None,,,,,,
 2,train,513,"[3936, 3938): 'M3'",LOC,None,,,,,,
 0,train,515,"[11, 27): 'OFFICIAL JOURNAL'",ORG,None,,,,,,
-0,train,517,"[527, 531): 'Tour'",MISC,none,,,,,,
+0,train,517,"[527, 531): 'Tour'",MISC,None,,,,,,
 ,train,518,"[101, 107): 'Cyprus'",LOC,Tag,,ORG,Soccer team,,,
 ,train,518,"[188, 194): 'Poland'",LOC,Tag,,ORG,Soccer team,,,
 3,train,518,"[19, 25): 'POLAND'",LOC,Tag,,ORG,Soccer team,,,
