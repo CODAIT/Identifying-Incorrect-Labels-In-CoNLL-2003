@@ -184,12 +184,10 @@ def process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encodin
 
     result = dataset.save()
 
-    if target_file is not None:
-        with open(target_file, mode="w") as f:
-            f.writelines(dataset.dataset_lines)
+    with open(target_file, mode="w") as f:
+        f.write(result)
 
     return result
-
 
 
 if __name__ == '__main__':
