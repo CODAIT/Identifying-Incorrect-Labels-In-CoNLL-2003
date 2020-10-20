@@ -17,7 +17,7 @@ def delete_lines(input_file, output_file, lines):
     """
     with open(input_file, "r") as source_file:
         file_lines = source_file.readlines()
-    for l in lines:
+    for l in sorted(lines, reverse=True):
         assert file_lines[l] == "\n"
         del file_lines[l]
     with open(output_file, "w+") as new_file:
