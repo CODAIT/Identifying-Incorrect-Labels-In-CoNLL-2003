@@ -156,5 +156,7 @@ if __name__ == '__main__':
 
     apply_sentence_boundary_corrections(
         label_corrected_dataset_info,
-        args.sentence_boundary_corrections_file
+        args.sentence_boundary_corrections_file,
+        args.corrected_corpus_dir,
+        args.corpus_fold
     )
