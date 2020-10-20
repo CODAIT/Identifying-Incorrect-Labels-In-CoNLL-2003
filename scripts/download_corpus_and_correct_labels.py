@@ -78,7 +78,7 @@ def apply_label_corrections(data_set_info, csv_file, target_dir=None, corpus_fol
     new_data_set_info = dict()
     for fold, fold_file in fold_n_files:
         target_file = os.path.join(target_dir, os.path.split(fold_file)[-1])
-        logging.info("Processing fold '{}' to file: '{}'".format(fold, target_file))
+        logging.info("Correcting labels: Processing fold '{}' to file: '{}'".format(fold, target_file))
         correct_label_errors.process_dataset_file(fold, fold_file, csv_file, None, target_file)
         new_data_set_info[fold] = target_file
 
@@ -104,7 +104,7 @@ def apply_sentence_boundary_corrections(data_set_info, json_file, target_dir=Non
 
     for fold, fold_file in fold_n_files:
         target_file = os.path.join(target_dir, os.path.split(fold_file)[-1])
-        logging.info("Processing fold '{}' to file: '{}'".format(fold, target_file))
+        logging.info("Correcting sentence boundaries: Processing fold '{}' to file: '{}'".format(fold, target_file))
         correct_sentence_boundary_errors.process_dataset_file(
             fold, fold_file, json_file, target_file)
 
