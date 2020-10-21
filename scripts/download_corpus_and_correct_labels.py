@@ -24,7 +24,8 @@ import argparse
 import logging
 import os
 
-from correct_label_errors import process_dataset_file
+import correct_label_errors
+import correct_sentence_boundary_errors
 
 try:
     import text_extensions_for_pandas as tp
@@ -63,7 +64,34 @@ def apply_label_corrections(data_set_info, csv_file, target_dir=None, corpus_fol
     :param data_set_info: Dictionary containing a mapping from fold name to file name for
      each of the three folds (`train`, `test`, `dev`) of the corpus.
     :param csv_file: CSV file containing the label corrections
-    :param target_dir: (optional) Target directory to for the corrected corpus or
+    :param target_dir: (optional) Target directory for the corrected corpus or
+     None for default of "corrected_corpus/label_only".
+    :param corpus_fold: (optional) Apply corrections to a specific fold only, or None for
+     the entire corpus.
+    :return:
+    """
+    target_dir = target_dir or os.path.join("corrected_corpus", "label_only")
+
+    fold_n_files = data_set_info.items() if corpus_fold is None \
+        else [(corpus_fold, data_set_info[corpus_fold])]
+
+    new_data_set_info = dict()
+    for fold, fold_file in fold_n_files:
+        target_file = os.path.join(target_dir, os.path.split(fold_file)[-1])
+        logging.info("Correcting labels: Processing fold '{}' to file: '{}'".format(fold, target_file))
+        correct_label_errors.process_dataset_file(fold, fold_file, csv_file, None, target_file)
+        new_data_set_info[fold] = target_file
+
+    return new_data_set_info
+
+
+def apply_sentence_boundary_corrections(data_set_info, json_file, target_dir=None, corpus_fold=None):
+    """
+
+    :param data_set_info: Dictionary containing a mapping from fold name to file name for
+     each of the three folds (`train`, `test`, `dev`) of the corpus.
+    :param json_file: JSON file containing the sentence boundary corrections -- specifically the line numbers in each file to be deleted
+    :param target_dir: (optional) Target directory for the corrected corpus or
      None for default of "corrected_corpus".
     :param corpus_fold: (optional) Apply corrections to a specific fold only, or None for
      the entire corpus.
@@ -76,8 +104,9 @@ def apply_label_corrections(data_set_info, csv_file, target_dir=None, corpus_fol
 
     for fold, fold_file in fold_n_files:
         target_file = os.path.join(target_dir, os.path.split(fold_file)[-1])
-        logging.info("Processing fold '{}' to file: '{}'".format(fold, target_file))
-        process_dataset_file(fold, fold_file, csv_file, None, target_file)
+        logging.info("Correcting sentence boundaries: Processing fold '{}' to file: '{}'".format(fold, target_file))
+        correct_sentence_boundary_errors.process_dataset_file(
+            fold, fold_file, json_file, target_file)
 
 
 if __name__ == '__main__':
@@ -92,9 +121,13 @@ if __name__ == '__main__':
     parser.add_argument("--corrected_corpus_dir", type=str, default="corrected_corpus",
                         help="Directory to place the corrected corpus")
 
-    parser.add_argument("--corrections_file", type=str,
+    parser.add_argument("--label_corrections_file", type=str,
                         default=os.path.join("corrected_labels",
                                              "all_conll_corrections_combined.csv"))
+
+    parser.add_argument("--sentence_boundary_corrections_file", type=str,
+                        default=os.path.join("corrected_labels",
+                                             "sentence_corrections.json"))
 
     parser.add_argument("--corpus_fold", type=str,
                         help="Correct only a specific fold of the corpus if specified as "
@@ -108,9 +141,22 @@ if __name__ == '__main__':
     if d_split[-1] == "scripts":
         os.chdir(os.path.join(*d_split[:-1]))
 
-    apply_label_corrections(
+    label_only_corrected_corpus_dir = os.path.join(args.corrected_corpus_dir, "label_only")
+    try:
+        os.mkdir(label_only_corrected_corpus_dir)
+    except FileExistsError:  # dir already exists, skip
+        pass
+
+    label_corrected_dataset_info = apply_label_corrections(
         get_or_download_corpus(target_dir=args.original_corpus_dir),
-        args.corrections_file,
+        args.label_corrections_file,
+        label_only_corrected_corpus_dir,
+        args.corpus_fold
+    )
+
+    apply_sentence_boundary_corrections(
+        label_corrected_dataset_info,
+        args.sentence_boundary_corrections_file,
         args.corrected_corpus_dir,
         args.corpus_fold
     )
