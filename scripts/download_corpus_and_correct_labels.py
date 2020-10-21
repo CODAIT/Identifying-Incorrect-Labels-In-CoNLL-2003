@@ -90,7 +90,7 @@ def apply_sentence_boundary_corrections(data_set_info, json_file, target_dir=Non
 
     :param data_set_info: Dictionary containing a mapping from fold name to file name for
      each of the three folds (`train`, `test`, `dev`) of the corpus.
-    :param json_file: JSON file containing the sentence boundary corrections
+    :param json_file: JSON file containing the sentence boundary corrections -- specifically the line numbers in each file to be deleted
     :param target_dir: (optional) Target directory for the corrected corpus or
      None for default of "corrected_corpus".
     :param corpus_fold: (optional) Apply corrections to a specific fold only, or None for
