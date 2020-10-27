@@ -245,7 +245,8 @@ def process_sentence_file(dataset_fold, dataset_file, json_file, target_file):
     with open(dataset_file, "r") as source_file:
         file_lines = source_file.readlines()
     for l in sorted(lines_to_delete[dataset_fold], reverse=True):
-        assert file_lines[l] == "\n"
+        if file_lines[l] != "\n":
+            raise ValueError("Not deleting a blank line: {}".format(file_lines[l]))
         del file_lines[l]
     with open(target_file, "w+") as new_file:
         for l in file_lines:
@@ -314,6 +315,19 @@ if __name__ == '__main__':
     d_split = os.path.split(d)
     if d_split[-1] == "scripts":
         os.chdir(os.path.join(*d_split[:-1]))
+
+    # Verify expected dirs and files exist
+    req_paths = {
+        "original_corpus_dir": args.original_corpus_dir,
+        "corrected_corpus_dir": args.original_corpus_dir,
+        "label_corrections_file": args.label_corrections_file,
+        "sentence_boundary_corrections_file": args.sentence_boundary_corrections_file,
+    }
+
+    missing = {k: v for k, v in req_paths.items() if not os.path.exists(v)}
+    if len(missing) > 0:
+        raise RuntimeError("Could not find the following files/directories, please verify script "
+                           "is run under the project root directory:\n{}".format(missing))
 
     apply_corrections(
         get_or_download_corpus(target_dir=args.original_corpus_dir),
