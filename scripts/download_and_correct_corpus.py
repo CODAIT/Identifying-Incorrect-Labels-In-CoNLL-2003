@@ -14,11 +14,11 @@
 #
 
 ################################################################################
-# download_corpus_and_correct_labels.py
+# download_and_correct_corpus.py
 
 """
-This module contains functions to download the CoNLL-2003 corpus and apply label
-corrections as done in the paper TODO: PAPER REF.
+This module contains functions to download the CoNLL-2003 corpus then applies
+label and sentence boundary corrections to create a corrected corpus.
 """
 import argparse
 import json
