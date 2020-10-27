@@ -117,9 +117,9 @@ if __name__ == '__main__':
     # NOTE: This data set is licensed for research use only. Be sure to adhere
     #  to the terms of the license when using this data set!
     data_set_info = {
-        "train": os.path.join("corrected_corpus", "eng.train_corrected"),
-        "dev": os.path.join("corrected_corpus", "eng.testa_corrected"),
-        "test": os.path.join("corrected_corpus", "eng.testb_corrected")
+        "train": os.path.join("corrected_corpus", "eng.train"),
+        "dev": os.path.join("corrected_corpus", "eng.testa"),
+        "test": os.path.join("corrected_corpus", "eng.testb")
     }
 
     # Directory with team model outputs
