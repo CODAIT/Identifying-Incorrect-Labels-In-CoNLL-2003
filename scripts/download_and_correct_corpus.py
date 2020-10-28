@@ -1,17 +1,65 @@
+#
+#  Copyright (c) 2020 IBM Corp.
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+
+################################################################################
+# download_and_correct_corpus.py
+
 """
-Usage:
-
-    python correct_label_errors.py [train|dev|test] [dataset_file] [csv patch] > new_dataset_file
-
+This module contains functions to download the CoNLL-2003 corpus then applies
+label and sentence boundary corrections to create a corrected corpus.
 """
-
-
+import argparse
+import json
+import logging
 import math
+import os
 import re
 import sys
+import tempfile
 
 import pandas as pd
-import text_extensions_for_pandas as tp
+
+try:
+    import text_extensions_for_pandas as tp
+except ImportError as e:
+    raise ImportError("Text Extensions for Pandas is required to run this script. Please "
+                      "install with `pip install text-extensions-for-pandas` or see the "
+                      "project page at https://github.com/CODAIT/text-extensions-for-pandas "
+                      "for more information.\ncaused by\n{}".format(str(e)))
+
+
+def get_or_download_corpus(target_dir=None):
+    """
+    Download the CoNLL-2003 corpus or load a previously downloaded copy.
+
+    NOTE: This data set is licensed for research use only. Be sure to adhere
+      to the terms of the license when using this data set!
+    :param target_dir: (optional) Target directory to download the corpus or
+     None for default of "original_corpus".
+    :return: Dictionary containing a mapping from fold name to file name for
+     each of the three folds (`train`, `test`, `dev`) of the corpus.
+    """
+    # Download and cache the data set.
+    # NOTE: This data set is licensed for research use only. Be sure to adhere
+    #  to the terms of the license when using this data set!
+    target_dir = target_dir or "original_corpus"
+    logging.info("Getting CoNLL-2003 Corpus..")
+    data_set_info = tp.io.conll.maybe_download_conll_data(target_dir)
+    logging.info("CoNLL-2003 Corpus downloaded to: {}"
+                 .format(os.path.join(os.getcwd(), target_dir)))
+    return data_set_info
 
 
 class Dataset:
@@ -126,7 +174,7 @@ class Dataset:
         return "\n".join(self.dataset_lines)
 
 
-def process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=None, target_file=None):
+def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=None, target_file=None):
     csv_patch = pd.read_csv(csv_patch_file, encoding=csv_encoding)
 
     # Only look into relevant dataset type rows
@@ -190,13 +238,101 @@ def process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encodin
     return result
 
 
+def process_sentence_file(dataset_fold, dataset_file, json_file, target_file):
+    with open(json_file) as f:
+        lines_to_delete = json.load(f)
+
+    with open(dataset_file, "r") as source_file:
+        file_lines = source_file.readlines()
+    for l in sorted(lines_to_delete[dataset_fold], reverse=True):
+        if file_lines[l] != "\n":
+            raise ValueError("Not deleting a blank line: {}".format(file_lines[l]))
+        del file_lines[l]
+    with open(target_file, "w+") as new_file:
+        for l in file_lines:
+            new_file.write(l)
+
+
+def apply_corrections(data_set_info, label_csv_file, sentence_json_file, target_dir=None, corpus_fold=None):
+    """
+    Applies label and sentence boundary corrections
+    :param data_set_info: Dictionary containing a mapping from fold name to file name for
+     each of the three folds (`train`, `test`, `dev`) of the corpus.
+    :param label_csv_file: CSV file containing the label corrections
+    :param sentence_json_file: JSON file containing the sentence boundary corrections -- specifically the line numbers
+     in each file to be deleted
+    :param target_dir: (optional) Target directory for the corrected corpus or
+     None for default of "corrected_corpus".
+    :param corpus_fold: (optional) Apply corrections to a specific fold only, or None for
+     the entire corpus.
+    """
+    target_dir = target_dir or "corrected_corpus"
+
+    fold_n_files = data_set_info.items() if corpus_fold is None \
+        else [(corpus_fold, data_set_info[corpus_fold])]
+
+    for fold, fold_file in fold_n_files:
+        target_file = os.path.join(target_dir, os.path.split(fold_file)[-1])
+
+        with tempfile.NamedTemporaryFile() as temp_file:
+            logging.info("Correcting labels for fold '{}'".format(fold))
+            process_label_file(fold, fold_file, label_csv_file, None, temp_file.name)
+
+            logging.info("Correcting sentence boundaries for fold '{}'".format(fold))
+            process_sentence_file(fold, temp_file.name, sentence_json_file, target_file)
+
+        logging.info("Corrected corpus fold '{}' to file: '{}'".format(fold, target_file))
+
+
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
 
-    dataset_fold = sys.argv[1]
-    dataset_file = sys.argv[2]
-    csv_patch_file = sys.argv[3]
-    csv_encoding = 'latin-1'
+    parser = argparse.ArgumentParser(description="This is a module to help download and apply "
+                                                 "label corrections to the CoNLL-2003 corpus.")
 
-    dataset = process_dataset_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding)
+    parser.add_argument("--original_corpus_dir", type=str, default="original_corpus",
+                        help="Directory for the original CoNLL-2003 corpus")
 
-    print(dataset.to_string())
+    parser.add_argument("--corrected_corpus_dir", type=str, default="corrected_corpus",
+                        help="Directory to place the corrected corpus")
+
+    parser.add_argument("--label_corrections_file", type=str,
+                        default=os.path.join("corrected_labels",
+                                             "all_conll_corrections_combined.csv"))
+
+    parser.add_argument("--sentence_boundary_corrections_file", type=str,
+                        default=os.path.join("corrected_labels",
+                                             "sentence_corrections.json"))
+
+    parser.add_argument("--corpus_fold", type=str,
+                        help="Correct only a specific fold of the corpus if specified as "
+                             "[train|dev|test], otherwise with correct the entire corpus")
+
+    args = parser.parse_args()
+
+    # Make sure working dir is top level of project repo
+    d = os.getcwd()
+    d_split = os.path.split(d)
+    if d_split[-1] == "scripts":
+        os.chdir(os.path.join(*d_split[:-1]))
+
+    # Verify expected dirs and files exist
+    req_paths = {
+        "original_corpus_dir": args.original_corpus_dir,
+        "corrected_corpus_dir": args.original_corpus_dir,
+        "label_corrections_file": args.label_corrections_file,
+        "sentence_boundary_corrections_file": args.sentence_boundary_corrections_file,
+    }
+
+    missing = {k: v for k, v in req_paths.items() if not os.path.exists(v)}
+    if len(missing) > 0:
+        raise RuntimeError("Could not find the following files/directories, please verify script "
+                           "is run under the project root directory:\n{}".format(missing))
+
+    apply_corrections(
+        get_or_download_corpus(target_dir=args.original_corpus_dir),
+        args.label_corrections_file,
+        args.sentence_boundary_corrections_file,
+        args.corrected_corpus_dir,
+        args.corpus_fold
+    )
