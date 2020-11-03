@@ -153,7 +153,7 @@ class Dataset:
         if tag != 'O':  # We only want the part after I/B-
             _, tag = self.dataset_lines[corpus_begin_linum].rsplit(sep='-', maxsplit=1)
         else:
-            print(f"{corpus_span} has an invalid tag {tag}")
+            print(f"{corpus_span} has an invalid tag {tag}", file=sys.stderr)
 
         # correct using the correct span
         begin_linum, end_linum = self.find(correct_span, doc_num)
@@ -164,9 +164,27 @@ class Dataset:
         for linum in range(begin_linum, end_linum + 1):
             line = self.dataset_lines[linum]
             prefix, _ = line.rsplit(maxsplit=1)
-            correct_line = ' '.join((prefix, f'I-{tag}'))
+
+            # Determine type
+            if linum == begin_linum and linum != 0:
+                type_ = self._determine_type(self.dataset_lines[linum - 1], line)
+            else:
+                type_ = "I"
+
+            correct_line = ' '.join((prefix, f'{type_}-{tag}'))
             self.dataset_lines[linum] = correct_line
         # TODO: May need to correct examine "I-" to "B-" following this line
+
+    def _determine_type(self, prev_line, current_line_tag):
+        'Determine whether the current line should be "I-" or "B-".'
+
+        type_and_tag = prev_line.rsplit(maxsplit=1)
+        if (len(type_and_tag) == 2 and type_and_tag[1].startswith(("I-", "B-")) and
+            type_and_tag[1].endswith(f"-{current_line_tag}")):
+            # previous line is I or B type and has the same tag
+            return "B"
+
+        return "I"
 
     def save(self):
         "Return the corrected dataset file."
