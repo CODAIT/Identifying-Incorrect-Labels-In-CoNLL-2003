@@ -110,7 +110,13 @@ class Dataset:
             line = self.dataset_lines[linum]
             prefix, tag = line.rsplit(maxsplit=1)
             if tag == 'O':
-                correct_line = ' '.join((prefix, "I-" + right_tag))  # TODO: May not be I-
+                # Determine type
+                if linum == begin_linum and linum != 0:
+                    type_ = self._determine_type(self.dataset_lines[linum - 1], right_tag)
+                else:
+                    type_ = "I"
+
+                correct_line = ' '.join((prefix, f"{type_}-" + right_tag))
             else:
                 prefix, _ = line.rsplit(sep='-', maxsplit=1)
                 correct_line = '-'.join((prefix, right_tag))
@@ -128,6 +134,11 @@ class Dataset:
             # TODO: Need to examine the correctness of nearby "B-" and "I-"
             self.dataset_lines[linum] = correct_line
 
+        # If the line below the corrected range is "B-", it should be changed to "I-"
+        if end_linum < len(self.dataset_lines) - 1:  # end_linum is not the last line
+            self.dataset_lines[end_linum + 1] = self._correct_line_i_b(self.dataset_lines[end_linum],
+                                                                       self.dataset_lines[end_linum + 1])
+
     def correct_wrong(self, span, doc_num):
         "Correct a Wrong type error."
 
@@ -139,9 +150,15 @@ class Dataset:
 
         begin_linum, end_linum = self.find(span, doc_num)
         for linum in range(begin_linum, end_linum + 1):
+            # Determine type
+            if linum == begin_linum and linum != 0:
+                type_ = self._determine_type(self.dataset_lines[linum - 1], right_tag)
+            else:
+                type_ = "I"
+
             line = self.dataset_lines[linum]
             prefix, _ = line.rsplit(maxsplit=1)
-            correct_line = ' '.join((prefix, f'I-{right_tag}'))  # TODO: This is not necessarily "I-"
+            correct_line = ' '.join((prefix, f'{type_}-{right_tag}'))
             self.dataset_lines[linum] = correct_line
 
     def correct_span(self, corpus_span, correct_span, doc_num):
@@ -167,16 +184,22 @@ class Dataset:
 
             # Determine type
             if linum == begin_linum and linum != 0:
-                type_ = self._determine_type(self.dataset_lines[linum - 1], line)
+                type_ = self._determine_type(self.dataset_lines[linum - 1], tag)
             else:
                 type_ = "I"
 
             correct_line = ' '.join((prefix, f'{type_}-{tag}'))
             self.dataset_lines[linum] = correct_line
-        # TODO: May need to correct examine "I-" to "B-" following this line
+
+        # Next line type may need correction
+        if end_linum < len(self.dataset_lines) - 1:  # not last line
+            self.dataset_lines[end_linum + 1] = self._correct_line_i_b(self.dataset_lines[end_linum],
+                                                                       self.dataset_lines[end_linum + 1])
 
     def _determine_type(self, prev_line, current_line_tag):
-        'Determine whether the current line should be "I-" or "B-".'
+        '''Determine whether the current line should be "I-" or "B-". ``current_line_tag`` is the part after "I-" or
+        "B-", or "O".
+        '''
 
         type_and_tag = prev_line.rsplit(maxsplit=1)
         if (len(type_and_tag) == 2 and type_and_tag[1].startswith(("I-", "B-")) and
@@ -185,6 +208,19 @@ class Dataset:
             return "B"
 
         return "I"
+
+    def _correct_line_i_b(self, prev_line, current_line):
+        "Correct the I- and B- type of the current line."
+
+        prefix_and_tag = current_line.rsplit(maxsplit=1)
+        if len(prefix_and_tag) <= 1:  # blank line
+            return current_line
+        tag = prefix_and_tag[1]
+        if tag == 'O':  # no I- or B- distinction
+            return current_line
+        tag = tag.rsplit('-', maxsplit=1)[1]
+        type_  = self._determine_type(prev_line, tag)
+        return ' '.join((prefix_and_tag[0], f'{type_}-{tag}'))
 
     def save(self):
         "Return the corrected dataset file."
