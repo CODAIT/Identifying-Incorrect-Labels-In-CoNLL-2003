@@ -51,14 +51,14 @@ def compute_precision_recall(gold_standard, team_output, team_name):
     return precision, recall, F1
 
 
-def compute_all(gold_standard_info, team_output_dir=None, entity_type=None):
+def compute_all(gold_standard_info, team_output_dir, entity_type=None):
 
     logging.info("Loading gold standard")
 
     # Read gold standard data for the test set.
-    gold_standard = tp.conll_2003_to_dataframes(gold_standard_info["test"],
-                                                ["pos", "phrase", "ent"],
-                                                [False, True, True])
+    gold_standard = tp.io.conll.conll_2003_to_dataframes(gold_standard_info["test"],
+                                                         ["pos", "phrase", "ent"],
+                                                         [False, True, True])
 
     # We don't use the part of speech tags and shallow parse information
     # from the original data set, so strip those columns out.
@@ -69,7 +69,7 @@ def compute_all(gold_standard_info, team_output_dir=None, entity_type=None):
 
     logging.info("Converting gold standard iob to spans")
 
-    gold_standard_spans = [tp.iob_to_spans(df) for df in gold_standard]
+    gold_standard_spans = [tp.io.conll.iob_to_spans(df) for df in gold_standard]
 
     # Load up the results from all 16 teams at once.
     teams = ["bender", "carrerasa", "carrerasb", "chieu", "curran",
@@ -77,29 +77,27 @@ def compute_all(gold_standard_info, team_output_dir=None, entity_type=None):
              "klein", "mayfield", "mccallum", "munro", "whitelaw",
              "wu", "zhang"]
 
+    # File with team model test output
     filename = "eng.testb_corrected"
-
-    if team_output_dir is None:
-        team_output_dir = "data/corrected_results/"
 
     logging.info("Loading team outputs")
 
     # Read all the output files into one dataframe per <document, team> pair.
     team_output = {
-        t: tp.conll_2003_output_to_dataframes(
+        t: tp.io.conll.conll_2003_output_to_dataframes(
             gold_standard, os.path.join(team_output_dir, t, filename))
         for t in teams
     }  # Type: Dict[str, List[pd.DataFrame]]
 
     logging.info("Converting team outputs iob to spans")
 
-    team_output_spans = {t: [tp.iob_to_spans(df) for df in dfs]
+    team_output_spans = {t: [tp.io.conll.iob_to_spans(df) for df in dfs]
                          for t, dfs in team_output.items()}
 
     if entity_type is not None:
         logging.info("Using only {} entity type".format(entity_type))
-        gold_standard_spans = [df[df["ent_type"] == "PER"] for df in gold_standard_spans]
-        team_output_spans = {t: [df[df["ent_type"] == "PER"] for df in dfs]
+        gold_standard_spans = [df[df["ent_type"] == entity_type] for df in gold_standard_spans]
+        team_output_spans = {t: [df[df["ent_type"] == entity_type] for df in dfs]
                              for t, dfs in team_output_spans.items()}
 
     logging.info("Computing precision and recall for teams: {}".format(teams))
@@ -115,16 +113,20 @@ def compute_all(gold_standard_info, team_output_dir=None, entity_type=None):
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
 
-    # Download and cache the data set.
+    # Filenames for the corups
     # NOTE: This data set is licensed for research use only. Be sure to adhere
     #  to the terms of the license when using this data set!
     data_set_info = {
-        "train": "", 
-        "dev": "data/corrected_results/conll03/eng.testa_corrected",
-        "test": "data/corrected_results/conll03/eng.testb_corrected"
+        "train": os.path.join("corrected_corpus", "eng.train"),
+        "dev": os.path.join("corrected_corpus", "eng.testa"),
+        "test": os.path.join("corrected_corpus", "eng.testb")
     }
-    #os.chdir(cwd)
 
-    entity_type = None #"PER"
-    result = compute_all(data_set_info, entity_type=entity_type)
+    # Directory with team model outputs
+    team_output_dir = os.path.join("team_outputs", "corrected_results")
+
+    # Optionally compute for specific entity type or None for all
+    entity_type = None  # "PER"
+
+    result = compute_all(data_set_info, team_output_dir, entity_type=entity_type)
     print("\nPrecision/Recall for Entity Type: {}\n\n{}".format(entity_type or "ALL", result))
