@@ -1,0 +1,20 @@
+,doc_offset,corpus_span,correct_span,error_type
+0,80.0,,"[44, 59): 'Interfax'",Token
+1,80.0,,"[51, 59): 'Interfax'",Token
+2,115.0,,"[23, 27): 'News'",Token
+3,163.0,"[220, 232): 'x-AEK Athens'","[222, 232): 'AEK Athens'",Token
+4,163.0,"[271, 283): 'x-Olympiakos'","[273, 283): 'Olympiakos'",Token
+5,163.0,"[308, 313): 'x-PAO'","[310, 313): 'PAO'",Token
+6,169.0,"[50, 61): 'trip-Canada'","[55, 61): 'Canada'",Token
+7,298.0,"[49, 60): '1997--Ruehe'","[55, 60): 'Ruehe'",Token
+8,343.0,"[11, 31): 'AUSTRALIAN RULES-AFL'","[11, 21): 'AUSTRALIAN'",Token
+9,343.0,"[11, 31): 'AUSTRALIAN RULES-AFL'","[11, 27): 'AUSTRALIAN RULES'",Token
+10,343.0,"[11, 31): 'AUSTRALIAN RULES-AFL'","[28, 31): 'AFL'",Token
+11,343.0,"[11, 31): 'AUSTRALIAN RULES-AFL'","[11, 21): 'AUSTRALIAN'",Token
+12,422.0,"[236, 246): 'Videoton(*'","[236, 244): 'Videoton'",Token
+13,593.0,"[45, 57): 'France-Juppe'","[45, 51): 'France'",Token
+14,593.0,"[45, 57): 'France-Juppe'","[52, 57): 'Juppe'",Token
+15,626.0,"[42, 59): 'disarmament-China'","[42, 59): 'disarmament-China'",Token
+16,701.0,"[17, 30): 'union-England'","[23, 30): 'England'",Token
+17,918.0,"[11, 24): 'INTERVIEW-T&N'","[11, 24): 'INTERVIEW-T&N'",Token
+18,918.0,"[11, 24): 'INTERVIEW-T&N'","[21, 24): 'T&N'",Token

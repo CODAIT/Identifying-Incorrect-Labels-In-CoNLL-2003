@@ -1,0 +1,15 @@
+,doc_offset,corpus_span,correct_span,error_type
+0,15.0,"[41, 51): 'CUNNINGHAM'","(33, 51]: 'RANDALL CUNNINGHAM'",Token
+1,15.0,"[41, 51): 'CUNNINGHAM'","(33,51] 'RANDALL CUNNINGHAM'",Token
+2,15.0,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'","[15, 32): 'AMERICAN FOOTBALL'",Token
+3,15.0,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'","[33, 40): 'RANDALL'",Token
+4,15.0,"[41, 51): 'CUNNINGHAM'","[33,51): 'RANDALL CUNNINGHAM'",Token
+5,39.0,"[11, 23): 'Boxing-Bruno'","[18, 23): 'Bruno'",Token
+6,39.0,,"[18, 23): 'Bruno'	",Token
+7,60.0,"[1358, 1371): 'Tripoli-based'","[1358, 1365): 'Tripoli'",Token
+8,65.0,"[1125, 1134): 'asset-St.'","[1131, 1146): 'St. Louis based'",Token
+9,65.0,"[592, 607): 'St. Louis-based'","[592, 601): 'St. Louis'",Token
+10,65.0,"[1125, 1134): 'asset-St.'",,Token
+11,175.0,"[252, 264): 'London-based'","[252, 258): 'London'",Token
+12,181.0,"[1761, 1774): 'Moscow-backed'","[1761, 1767): 'Moscow'",Token
+13,198.0,"[39, 47): 'aid-U.N.'","[43, 47): 'U.N.'",Token
