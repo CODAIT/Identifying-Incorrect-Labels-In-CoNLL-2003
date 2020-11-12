@@ -903,7 +903,7 @@
 2621,train,346,"[243, 248): 'Lotte'",PER,Tag,"[243, 248): 'Lotte'",ORG,,Baseball team,False,False,True,True
 2622,train,346,"[243, 248): 'Lotte'",,Tag,"[243, 248): 'Lotte'",ORG,,Baseball team,False,True,False,True
 2623,train,347,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
-2624,train,349,"[591, 611): 'Mariner Darren Bragg'","[591, 598): 'Mariner'",Both,MISC,,,,False,False,False,True
+2624,train,349,"[591, 611): 'Mariner Darren Bragg'",,Both,"[591, 598): 'Mariner'",MISC,,,False,False,False,True
 2625,train,349,"[1001, 1010): 'Cleveland'",ORG,Tag,"[1001, 1010): 'Cleveland'",LOC,,"In Cleveland, Kevin Seitzer's two-out singleï¿½",False,True,True,True
 2626,train,349,"[591, 611): 'Mariner Darren Bragg'",,Span,"[599, 611): 'Darren Bragg'",,,,False,True,False,True
 2627,train,351,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
