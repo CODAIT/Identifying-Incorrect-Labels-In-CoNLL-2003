@@ -69,10 +69,8 @@
 204,dev,39,"[11, 23): 'Boxing-Bruno'",MISC,Token,"[18, 23): 'Bruno'",PER,17,,False,True,True,False
 205,dev,39,,MISC,Token,"[18, 23): 'Bruno'	",PER,,"Tokenizer treats ""Boxing-Bruno"" as one token",False,True,False,True
 210,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[476, 500): 'Driefontein Consolidated'",ORG,17,,True,True,True,False
-211,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[505, 516): 'Gold Fields'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
-212,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields' Kloof Gold Mining Co'",ORG,Span,"[505, 516): 'Gold Fields''",ORG,,Two separate companies,False,True,False,True
-213,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[519, 539): 'Kloof Gold Mining Co'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
-214,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields' Kloof Gold Mining Co'",ORG,Span,"[519, 539): 'Kloof Gold Mining Co'",,,Two companies that own a third company,False,True,False,True
+211,dev,42,,,Missing,"[505, 516): 'Gold Fields'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
+213,dev,42,,,Missing,"[519, 539): 'Kloof Gold Mining Co'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
 248,dev,59,,,Missing,"[2024, 2029): 'Comex'",MISC,,"""New York's Comex market""",False,False,True,True
 251,dev,60,"[1358, 1371): 'Tripoli-based'",MISC,Token,"[1358, 1365): 'Tripoli'",LOC,15,,False,True,False,False
 257,dev,61,"[3878, 3888): 'Whitewater'",LOC,Tag,"[3878, 3888): 'Whitewater'",MISC,16,Event: whitewater scandal,False,True,False,False
@@ -240,10 +238,8 @@
 721,dev,155,"[19, 25): 'FRANCE'",LOC,Tag,"[19, 25): 'FRANCE'",ORG,13,,False,True,False,False
 731,dev,156,"[19, 25): 'FRANCE'",LOC,Tag,"[19, 25): 'FRANCE'",ORG,17,,False,True,False,False
 733,dev,157,"[39, 45): 'TURKEY'",LOC,Tag,"[39, 45): 'TURKEY'",ORG,17,,False,True,False,False
-737,dev,158,"[120, 128): 'division'",MISC,Span,"[114, 128): 'first division'",MISC,17,,False,True,False,False
 738,dev,158,,,Missing,"[42, 56): 'FIRST DIVISION'",MISC,,,False,False,False,True
 739,dev,158,"[120, 128): 'division'",MISC,Wrong,,,16, divisions of leagues not entities,True,False,False,False
-740,dev,159,"[114, 122): 'division'",MISC,Span,"[108, 122): 'first division'",MISC,17,,False,True,False,False
 741,dev,159,,,Missing,"[37, 51): 'FIRST DIVISION'",MISC,,,False,False,False,True
 742,dev,159,"[114, 122): 'division'",MISC,Wrong,,,16, divisions of leagues not entities,True,False,False,False
 743,dev,160,"[32, 38): 'TURKEY'",LOC,Tag,"[32, 38): 'TURKEY'",ORG,16,Zach: Soccer nat team,False,True,False,False
@@ -438,7 +434,6 @@
 1388,test,54,"[3421, 3428): 'Boxmeer'",PER,Token,"[3417, 3428): 'van Boxmeer'",,17,,False,True,False,False
 1389,test,54,"[3421, 3428): 'Boxmeer'",,Span,"[3417, 3428): 'van Boxmeer'",PER,9,,True,False,False,False
 1396,test,54,,,Token,"[?, 27): 'ZYWIEC'",ORG,,INTERVIEW-ZYWIECï¿½SEES NO BIG 97 NET RISE.,False,True,False,True
-1397,test,54,"[3224, 3230): 'Zywiec'",ORG,Wrong,,,17,Company name as first word of brand name; see next line,False,True,False,False
 1398,test,54,"[3231, 3241): 'Full Light'",MISC,Wrong,,,16,"See previous line – type of beer, brand",True,False,False,False
 1407,test,55,"[129, 134): 'Czech'",LOC,Tag,"[129, 134): 'Czech'",MISC,17,,False,True,False,False
 1411,test,56,"[11, 16): 'UK-US'",MISC,Token,"[11, 13): 'UK'",LOC,15,,False,True,False,False
