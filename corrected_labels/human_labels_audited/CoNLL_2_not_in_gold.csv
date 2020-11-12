@@ -66,7 +66,7 @@ num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corp
 15,test,199,"[27, 35): 'SCOTTISH'",MISC,Span,"[27, 52): 'SCOTTISH PREMIER DIVISION'",MISC,"[27, 35): 'SCOTTISH'",,,,,
 15,test,216,"[219, 227): 'Tasmania'",LOC,None,,,,,,,,
 15,test,224,"[1036, 1042): 'Ottawa'",LOC,None,,ORG,,,Ottawa hockey team,,,
-14,dev,42,"[519, 539): 'Kloof Gold Mining Co'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields' Kloof Gold Mining Co'",,,,Kloof Gold Mining Co is a subsidiary of the other two companies,,,
+14,dev,42,"[519, 539): 'Kloof Gold Mining Co'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",,,,Kloof Gold Mining Co is a subsidiary of the other two companies,,,
 14,dev,66,"[803, 808): 'Islam'",MISC,None,,,,,"[788, 803): 'Nation of Islam'",,,
 14,dev,85,"[1140, 1148): 'Indosuez'",LOC,None,,ORG,,,,,,
 14,dev,90,"[983, 991): 'Onarheim'",PER,Tag,,LOC,,PER,Stig Onarheim,,,
