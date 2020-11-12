@@ -66,7 +66,7 @@ num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corp
 17,dev,39,"[11, 23): 'Boxing-Bruno'",PER,Token,,MISC,"[18, 23): 'Bruno'	",PER,"Tokenizer treats ""Boxing-Bruno"" as one token",,,
 17,dev,39,"[340, 360): 'World Boxing Council'",MISC,None,,ORG,,,,,,
 16,dev,42,"[476, 516): 'Driefontein Consolidated and Gold Fields'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,"[476, 500): 'Driefontein Consolidated'",ORG,Two separate companies,,,
-16,dev,42,"[476, 516): 'Driefontein Consolidated and Gold Fields'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,"[505, 516): 'Gold Fields''",ORG,Two separate companies,,,
+16,dev,42,"[476, 516): 'Driefontein Consolidated and Gold Fields'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,"[505, 516): 'Gold Fields'",ORG,Two separate companies,,,
 15,dev,42,"[519, 539): 'Kloof Gold Mining Co'",ORG,Span,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,,,Two companies that own a third company,,,
 17,dev,49,"[1920, 1925): 'Tajik'",LOC,None,,MISC,,,,,,
 16,dev,49,"[53, 74): 'Yuri Kushko TAVILDARA'",PER,None,"[53, 64): 'Yuri Kushko'",PER,,,,,,
