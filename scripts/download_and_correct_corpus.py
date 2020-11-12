@@ -306,8 +306,27 @@ def process_sentence_file(dataset_fold, dataset_file, json_file, target_file):
         for l in file_lines:
             new_file.write(l)
 
+def process_token_file(dataset_fold, dataset_file, sentence_json_file, token_edits_json_file, target_file):
+    with open(token_edits_json_file) as f:
+        edits = pd.read_json(f); 
+    edits = edits[edits.fold == dataset_fold]; # select only correct fold 
+    with open(sentence_json_file) as f: 
+        sentence_deletes = json.load(f);
+    with open(dataset_file, "r") as source_file:
+        file_lines = source_file.readlines()
 
-def apply_corrections(data_set_info, label_csv_file, sentence_json_file, target_dir=None, corpus_fold=None):
+    removed = 0
+    for l in range(0, edits.index.max()):
+        if l in sentence_deletes[dataset_fold]:
+            removed +=1
+        if l in edits.index : 
+            file_lines[l-removed] = edits.at[l,'correct_line']
+    with open(target_file, "w+") as new_file:
+        for l in file_lines:
+            new_file.write(l)
+
+
+def apply_corrections(data_set_info, label_csv_file, sentence_json_file,token_edits_json_file, target_dir=None, corpus_fold=None):
     """
     Applies label and sentence boundary corrections
     :param data_set_info: Dictionary containing a mapping from fold name to file name for
@@ -333,7 +352,10 @@ def apply_corrections(data_set_info, label_csv_file, sentence_json_file, target_
             process_label_file(fold, fold_file, label_csv_file, None, temp_file.name)
 
             logging.info("Correcting sentence boundaries for fold '{}'".format(fold))
-            process_sentence_file(fold, temp_file.name, sentence_json_file, target_file)
+            process_sentence_file(fold, temp_file.name, sentence_json_file, temp_file.name)
+
+            logging.info("Correcting token errors for fold'{}'".format(fold))
+            process_token_file(fold,temp_file.name,sentence_json_file, token_edits_json_file,target_file)
 
         logging.info("Corrected corpus fold '{}' to file: '{}'".format(fold, target_file))
 
@@ -358,6 +380,10 @@ if __name__ == '__main__':
                         default=os.path.join("corrected_labels",
                                              "sentence_corrections.json"))
 
+    parser.add_argument("--token_corrections_file", type=str,
+                        default=os.path.join("corrected_labels",
+                                             "token_corrections.json"))
+
     parser.add_argument("--corpus_fold", type=str,
                         help="Correct only a specific fold of the corpus if specified as "
                              "[train|dev|test], otherwise with correct the entire corpus")
@@ -375,6 +401,7 @@ if __name__ == '__main__':
         "original_corpus_dir": args.original_corpus_dir,
         "corrected_corpus_dir": args.original_corpus_dir,
         "label_corrections_file": args.label_corrections_file,
+        "token_corrections_file": args.token_corrections_file,
         "sentence_boundary_corrections_file": args.sentence_boundary_corrections_file,
     }
 
@@ -387,6 +414,7 @@ if __name__ == '__main__':
         get_or_download_corpus(target_dir=args.original_corpus_dir),
         args.label_corrections_file,
         args.sentence_boundary_corrections_file,
+        args.token_corrections_file,
         args.corrected_corpus_dir,
         args.corpus_fold
     )
