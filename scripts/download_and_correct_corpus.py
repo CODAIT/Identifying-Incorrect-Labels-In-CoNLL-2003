@@ -252,7 +252,7 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
                 print(f"Skip span error for {row['correct_span']}. Please correct it by hand.", file=sys.stderr)
                 continue
             if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
-                print(f'[WARNING] correct ent type for line {index} are empty. Skipping...',
+                print(f'[WARNING] correct ent type for line {index} are empty. row: {row}. Skipping...',
                       file=sys.stderr)
                 continue
             dataset.correct_missing(corpus_span, row['correct_ent_type'], int(row['doc_offset']))
@@ -279,7 +279,7 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
             dataset.correct_span(row['corpus_span'], row['correct_span'], int(row['doc_offset']))
         elif row['error_type'] == 'Both':
             if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
-                print(f'[WARNING] Correct_ent_type for line {index} is empty. Skipping...', file=sys.stderr)
+                print(f'[WARNING] Correct_ent_type for line {index} is empty. row: {row}. Skipping...', file=sys.stderr)
                 continue
             dataset.correct_tag(row['corpus_span'], row['correct_ent_type'], int(row['doc_offset']))
             dataset.correct_span(row['corpus_span'], row['correct_span'], int(row['doc_offset']))
@@ -306,27 +306,28 @@ def process_sentence_file(dataset_fold, dataset_file, json_file, target_file):
         for l in file_lines:
             new_file.write(l)
 
+
 def process_token_file(dataset_fold, dataset_file, sentence_json_file, token_edits_json_file, target_file):
     with open(token_edits_json_file) as f:
-        edits = pd.read_json(f); 
-    edits = edits[edits.fold == dataset_fold]; # select only correct fold 
-    with open(sentence_json_file) as f: 
-        sentence_deletes = json.load(f);
+        edits = pd.read_json(f)
+    edits = edits[edits.fold == dataset_fold]  # select only correct fold
+    with open(sentence_json_file) as f:
+        sentence_deletes = json.load(f)
     with open(dataset_file, "r") as source_file:
         file_lines = source_file.readlines()
 
     removed = 0
     for l in range(0, edits.index.max()):
         if l in sentence_deletes[dataset_fold]:
-            removed +=1
-        if l in edits.index : 
-            file_lines[l-removed] = edits.at[l,'correct_line']
+            removed += 1
+        if l in edits.index:
+            file_lines[l-removed] = edits.at[l, 'correct_line']
     with open(target_file, "w+") as new_file:
         for l in file_lines:
             new_file.write(l)
 
 
-def apply_corrections(data_set_info, label_csv_file, sentence_json_file,token_edits_json_file, target_dir=None, corpus_fold=None):
+def apply_corrections(data_set_info, label_csv_file, sentence_json_file, token_edits_json_file, target_dir=None, corpus_fold=None):
     """
     Applies label and sentence boundary corrections
     :param data_set_info: Dictionary containing a mapping from fold name to file name for
@@ -334,6 +335,7 @@ def apply_corrections(data_set_info, label_csv_file, sentence_json_file,token_ed
     :param label_csv_file: CSV file containing the label corrections
     :param sentence_json_file: JSON file containing the sentence boundary corrections -- specifically the line numbers
      in each file to be deleted
+    :param token_edits_json_file: JSON file containing token edit corrections.
     :param target_dir: (optional) Target directory for the corrected corpus or
      None for default of "corrected_corpus".
     :param corpus_fold: (optional) Apply corrections to a specific fold only, or None for
@@ -354,7 +356,7 @@ def apply_corrections(data_set_info, label_csv_file, sentence_json_file,token_ed
             logging.info("Correcting sentence boundaries for fold '{}'".format(fold))
             process_sentence_file(fold, temp_file.name, sentence_json_file, temp_file.name)
 
-            logging.info("Correcting token errors for fold'{}'".format(fold))
+            logging.info("Correcting token errors for fold '{}'".format(fold))
             process_token_file(fold,temp_file.name,sentence_json_file, token_edits_json_file,target_file)
 
         logging.info("Corrected corpus fold '{}' to file: '{}'".format(fold, target_file))

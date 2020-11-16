@@ -69,10 +69,8 @@
 204,dev,39,"[11, 23): 'Boxing-Bruno'",MISC,Token,"[18, 23): 'Bruno'",PER,17,,False,True,True,False
 205,dev,39,,MISC,Token,"[18, 23): 'Bruno'	",PER,,"Tokenizer treats ""Boxing-Bruno"" as one token",False,True,False,True
 210,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[476, 500): 'Driefontein Consolidated'",ORG,17,,True,True,True,False
-211,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[505, 516): 'Gold Fields'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
-212,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields' Kloof Gold Mining Co'",ORG,Span,"[505, 516): 'Gold Fields''",ORG,,Two separate companies,False,True,False,True
-213,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields ' Kloof Gold Mining Co'",ORG,Span,"[519, 539): 'Kloof Gold Mining Co'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
-214,dev,42,"[476, 539): 'Driefontein Consolidated and Gold Fields' Kloof Gold Mining Co'",ORG,Span,"[519, 539): 'Kloof Gold Mining Co'",,,Two companies that own a third company,False,True,False,True
+211,dev,42,,,Missing,"[505, 516): 'Gold Fields'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
+213,dev,42,,,Missing,"[519, 539): 'Kloof Gold Mining Co'",ORG,16,Description of two companies jointly owning a third company,True,False,False,False
 248,dev,59,,,Missing,"[2024, 2029): 'Comex'",MISC,,"""New York's Comex market""",False,False,True,True
 251,dev,60,"[1358, 1371): 'Tripoli-based'",MISC,Token,"[1358, 1365): 'Tripoli'",LOC,15,,False,True,False,False
 257,dev,61,"[3878, 3888): 'Whitewater'",LOC,Tag,"[3878, 3888): 'Whitewater'",MISC,16,Event: whitewater scandal,False,True,False,False
@@ -240,10 +238,8 @@
 721,dev,155,"[19, 25): 'FRANCE'",LOC,Tag,"[19, 25): 'FRANCE'",ORG,13,,False,True,False,False
 731,dev,156,"[19, 25): 'FRANCE'",LOC,Tag,"[19, 25): 'FRANCE'",ORG,17,,False,True,False,False
 733,dev,157,"[39, 45): 'TURKEY'",LOC,Tag,"[39, 45): 'TURKEY'",ORG,17,,False,True,False,False
-737,dev,158,"[120, 128): 'division'",MISC,Span,"[114, 128): 'first division'",MISC,17,,False,True,False,False
 738,dev,158,,,Missing,"[42, 56): 'FIRST DIVISION'",MISC,,,False,False,False,True
 739,dev,158,"[120, 128): 'division'",MISC,Wrong,,,16, divisions of leagues not entities,True,False,False,False
-740,dev,159,"[114, 122): 'division'",MISC,Span,"[108, 122): 'first division'",MISC,17,,False,True,False,False
 741,dev,159,,,Missing,"[37, 51): 'FIRST DIVISION'",MISC,,,False,False,False,True
 742,dev,159,"[114, 122): 'division'",MISC,Wrong,,,16, divisions of leagues not entities,True,False,False,False
 743,dev,160,"[32, 38): 'TURKEY'",LOC,Tag,"[32, 38): 'TURKEY'",ORG,16,Zach: Soccer nat team,False,True,False,False
@@ -438,7 +434,6 @@
 1388,test,54,"[3421, 3428): 'Boxmeer'",PER,Token,"[3417, 3428): 'van Boxmeer'",,17,,False,True,False,False
 1389,test,54,"[3421, 3428): 'Boxmeer'",,Span,"[3417, 3428): 'van Boxmeer'",PER,9,,True,False,False,False
 1396,test,54,,,Token,"[?, 27): 'ZYWIEC'",ORG,,INTERVIEW-ZYWIECï¿½SEES NO BIG 97 NET RISE.,False,True,False,True
-1397,test,54,"[3224, 3230): 'Zywiec'",ORG,Wrong,,,17,Company name as first word of brand name; see next line,False,True,False,False
 1398,test,54,"[3231, 3241): 'Full Light'",MISC,Wrong,,,16,"See previous line – type of beer, brand",True,False,False,False
 1407,test,55,"[129, 134): 'Czech'",LOC,Tag,"[129, 134): 'Czech'",MISC,17,,False,True,False,False
 1411,test,56,"[11, 16): 'UK-US'",MISC,Token,"[11, 13): 'UK'",LOC,15,,False,True,False,False
@@ -908,7 +903,7 @@
 2621,train,346,"[243, 248): 'Lotte'",PER,Tag,"[243, 248): 'Lotte'",ORG,,Baseball team,False,False,True,True
 2622,train,346,"[243, 248): 'Lotte'",,Tag,"[243, 248): 'Lotte'",ORG,,Baseball team,False,True,False,True
 2623,train,347,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
-2624,train,349,"[591, 611): 'Mariner Darren Bragg'","[591, 598): 'Mariner'",Both,MISC,,,,False,False,False,True
+2624,train,349,"[591, 611): 'Mariner Darren Bragg'",,Both,"[591, 598): 'Mariner'",MISC,,,False,False,False,True
 2625,train,349,"[1001, 1010): 'Cleveland'",ORG,Tag,"[1001, 1010): 'Cleveland'",LOC,,"In Cleveland, Kevin Seitzer's two-out singleï¿½",False,True,True,True
 2626,train,349,"[591, 611): 'Mariner Darren Bragg'",,Span,"[599, 611): 'Darren Bragg'",,,,False,True,False,True
 2627,train,351,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",,,"Sentence boundary between ""League"" and ""Baseball""",False,True,False,True
@@ -960,7 +955,7 @@
 2686,train,458,"[1294, 1300): 'Nicola'",MISC,Wrong,,,,,False,False,True,True
 2687,train,458,"[363, 366): 'Col'",LOC,Wrong,,,,"Abbreviation for ""Colonel"". Titles not considered entities; also tagged as LOC, which is doubly wrong",False,False,False,True
 2695,train,487,,,Missing,"[911, 916): 'NYMEX'",ORG,,,False,False,True,True
-2696,train,488,,,Missing,"[224, 257): 'OCASEK GOVERNMENT OFFICE BUILDING'",LOC,,https://das.ohio.gov/Divisions/General-Services/Properties-and-Facilities/Ocasek,False,False,False,True
+2696,train,492,,,Missing,"[224, 257): 'OCASEK GOVERNMENT OFFICE BUILDING'",LOC,,https://das.ohio.gov/Divisions/General-Services/Properties-and-Facilities/Ocasek,False,False,False,True
 2697,train,488,"[822, 826): 'Sask'",LOC,Sentence,"[822, 827): 'Sask.'",LOC,,Incorrect sentence boundary after period and before comma,False,False,True,True
 2698,train,488,"[822, 826): 'Sask'",LOC,Span,"[822, 827): 'Sask.'",,,Period immediately before comma,False,True,False,True
 2699,train,488,"[889, 893): 'Alta'",,Span,"[889, 894): 'Alta.'",,,,False,True,False,True
@@ -1145,7 +1140,7 @@
 2975,train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Both,"[407, 419): 'CEDAR RAPIDS'",LOC,,,False,False,False,True
 2977,train,874,"[59, 65): 'RENNES'",ORG,Tag,"[59, 65): 'RENNES'",LOC,,,False,True,True,True
 2980,train,893,"[124, 130): 'Fowler'",PER,Span,"[118, 130): 'Wyche Fowler'",,,,False,False,True,True
-2981,train,893,"[124, 130): 'Fowler'",,Span,"[21, 24): 'T&N'",ORG,,,False,True,False,True
+2981,train,893,"[124, 130): 'Fowler'",,Span,"[118, 130): 'Wyche Fowler'",ORG,,,False,True,False,True
 2984,train,918,"[11, 24): 'INTERVIEW-T&N'",,Token,"[11, 24): 'INTERVIEW-T&N'",,,INTERVIEW-T&N' treated as a single token,False,True,False,True
 2985,train,918,"[11, 24): 'INTERVIEW-T&N'",MISC,Token,"[21, 24): 'T&N'",ORG,,"Tokenizer treated ""INVERVIEW-T&N"" as a single token",False,False,True,True
 2986,train,919,"[112, 119): 'Richter'",PER,Tag,"[112, 119): 'Richter'",MISC,,,False,False,True,True
