@@ -92,12 +92,12 @@ class Dataset:
             return -1, -2
         found_df = df[df["span"].values.begin == begin]
         if found_df.shape[0] == 0:
-            print(f"[WARNING] Could not find {span}", file=sys.stderr)
+            print(f"[WARNING] Could not find {span}: No span begins with {begin}", file=sys.stderr)
             return -1, -2
         begin_linum = found_df.iloc[0]['line_num']
         found_df = df[df["span"].values.end == end]
         if found_df.shape[0] == 0:
-            print(f"[WARNING] Could not find {span}", file=sys.stderr)
+            print(f"[WARNING] Could not find {span}: No span ends with {end}", file=sys.stderr)
             return -1, -2
         end_linum = found_df.iloc[0]['line_num']
         return begin_linum, end_linum
@@ -248,9 +248,6 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
             continue
 
         if row['error_type'] == 'Missing':
-            if row['correct_span'] == "[53,64) 'West Indes'":
-                print(f"Skip span error for {row['correct_span']}. Please correct it by hand.", file=sys.stderr)
-                continue
             if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
                 print(f'[WARNING] correct ent type for line {index} are empty. row: {row}. Skipping...',
                       file=sys.stderr)
@@ -264,15 +261,6 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
 
     for index, row in csv_patch.iterrows():
         if row['error_type'] == 'Span':
-            if row['corpus_span'].endswith("'Minn'"):
-                print("Skip span error for '(Iowa-S) Minn'. Please correct it by hand.", file=sys.stderr)
-                continue
-            if row['corpus_span'].endswith("'Boxing-Bruno'"):
-                print(f"Skip span error for '{row['corpus_span']}'. Please correct it by hand.", file=sys.stderr)
-                continue
-            if row['correct_span'] == "[43, 47): 'U.N.'":
-                print(f"Skip span error for '{row['correct_span']}'. Please correct it by hand.", file=sys.stderr)
-                continue
             if isinstance(row['correct_span'], float) and math.isnan(row['correct_span']):
                 print(f'[WARNING] Correct span for line {index} is empty. Skipping...', file=sys.stderr)
                 continue
