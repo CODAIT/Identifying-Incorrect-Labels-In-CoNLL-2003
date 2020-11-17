@@ -14,5 +14,5 @@ This will download the CoNLL-2003 corpus to `original_corpus/`, apply correction
 corrected corpus in `corrected_corpus/`.
 
 NOTE: [Text Extensions for Pandas](https://github.com/CODAIT/text-extensions-for-pandas) must be 
-installed to run the script. To install in your Python environment, use the command
-`pip install text-extensions-for-pandas`.
+installed to run the script. It provides utilities to download and work with the CoNLL-2003
+corpus and assist with NLP analysis on Pandas.
