@@ -491,8 +491,7 @@
 1682,test,112,"[174, 184): 'John Mills'",PER,Span,"[174, 187): 'John Mills Jr'",PER,
 1683,test,112,"[174, 184): 'John Mills'",,Span,"[174, 187): 'John Mills Jr'",,
 1686,test,114,"[11, 17): 'Iowa-S'",LOC,Token,"[11, 15): 'Iowa'",LOC,"""Iowa-S"" treated as a single token"
-1687,test,114,"[11, 17): 'Iowa-S'",LOC,Token,"[11, 15): 'Iowa'  ",,split on ‘-’
-1690,test,114,"[18, 22): 'Minn'",LOC,Span,"[16, 22): 'S Minn'",,
+1690,test,114,"[18, 22): 'Minn'",LOC,Token,"[16, 22): 'S Minn'",LOC,
 1692,test,114,"[51, 61): 'sales-USDA'",MISC,Token,"[57, 61): 'USDA'",MISC,
 1696,test,115,,,Missing,"[459, 465): 'Luebke'",PER,
 1703,test,117,,,Missing,"[1270, 1273): 'Hub'",LOC,Henry Hub
@@ -507,8 +506,8 @@
 1751,test,121,,,Missing,"[11, 29): 'Action Performance'",ORG,
 1758,test,122,"[273, 286): 'United States'",LOC,Both,"[251, 286): 'Human Society of the United States'",ORG,
 1760,test,122,"[522, 545): 'Glencoe Animal Hospital'",ORG,Tag,"[522, 545): 'Glencoe Animal Hospital'",LOC,specific hospitol
-1766,test,123,"[11, 17): 'Iowa-S'",LOC,Token,"[11, 15): 'Iowa'  ",,split on '-'
-1767,test,123,"[18, 22): 'Minn'",LOC,Span,"[16, 22): 'S Minn'",,
+1766,test,123,"[11, 17): 'Iowa-S'",LOC,Token,"[11, 15): 'Iowa'  ",LOC,split on '-'
+1767,test,123,"[18, 22): 'Minn'",LOC,Token,"[16, 22): 'S Minn'",LOC,
 1773,test,127,"[528, 531): 'RAI'",LOC,Tag,"[528, 531): 'RAI'",ORG,
 1779,test,130,"[389, 395): 'Europe'",LOC,Both,"[389, 405): 'Europe Agreement'",MISC,
 1782,test,131,,,Missing,"[449, 454): 'Babri'",LOC,the Babri mosque
