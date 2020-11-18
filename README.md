@@ -6,7 +6,7 @@ the corpus, run the commands below. The CoNLL-2003 corpus is licensed for resear
 sure to adhere to the terms of the license when using this data set!
 
 ```bash
-pip3 install text-extensions-for-pandas
+pip3 install -r requirements.txt
 python3 scripts/download_and_correct_corpus.py
 ```
 

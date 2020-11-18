@@ -1,0 +1,7 @@
+# Requirements to run the scripts in this repository.
+# Install these dependencies with the command:
+#  pip3 install -r requirements.txt
+# Fix the version of this library to ensure consistent output.
+text-extensions-for-pandas==0.1b1
+matplotlib
+
