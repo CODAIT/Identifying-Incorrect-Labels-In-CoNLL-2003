@@ -344,8 +344,8 @@ def apply_corrections(data_set_info, label_csv_file, sentence_json_file, token_e
             logging.info("Correcting sentence boundaries for fold '{}'".format(fold))
             process_sentence_file(fold, temp_file.name, sentence_json_file, temp_file.name)
 
-            logging.info("Correcting token errors for fold '{}'".format(fold))
-            process_token_file(fold,temp_file.name,sentence_json_file, token_edits_json_file,target_file)
+            # logging.info("Correcting token errors for fold '{}'".format(fold))
+            # process_token_file(fold,temp_file.name,sentence_json_file, token_edits_json_file,target_file)
 
         logging.info("Corrected corpus fold '{}' to file: '{}'".format(fold, target_file))
 
