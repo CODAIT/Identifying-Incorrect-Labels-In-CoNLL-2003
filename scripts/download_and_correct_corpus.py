@@ -309,7 +309,7 @@ def process_token_file(dataset_fold, dataset_file, sentence_json_file, token_edi
         if l in sentence_deletes[dataset_fold]:
             removed += 1
         if l in edits.index:
-            file_lines[l-removed] = edits.at[l, 'correct_line']
+            file_lines[l-removed] = edits.at[l, 'correct_line'] + '\n'
     with open(target_file, "w+") as new_file:
         for l in file_lines:
             new_file.write(l)
