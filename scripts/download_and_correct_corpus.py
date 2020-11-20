@@ -276,7 +276,7 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
                       file=sys.stderr)
                 continue
             dataset.correct_missing(row['correct_span'], row['correct_ent_type'], int(row['doc_offset']))
-            continue
+
     result = dataset.save()
 
     with open(target_file, mode="w") as f:
