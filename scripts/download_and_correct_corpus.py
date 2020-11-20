@@ -237,6 +237,7 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
     csv_patch = csv_patch[csv_patch['error_type'] != 'None']
 
     dataset = Dataset(dataset_file)
+
     for index, row in csv_patch.iterrows():
         # A lot of rows misplace correct_span and corpus_span. If corpus_span
         # is empty, use correct_span as the corpus_span for Missing, Tag, and Wrong.
@@ -247,13 +248,6 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
                   file=sys.stderr)
             continue
 
-        if row['error_type'] == 'Missing':
-            if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
-                print(f'[WARNING] correct ent type for line {index} are empty. row: {row}. Skipping...',
-                      file=sys.stderr)
-                continue
-            dataset.correct_missing(corpus_span, row['correct_ent_type'], int(row['doc_offset']))
-            continue
         elif row['error_type'] == 'Tag':
             dataset.correct_tag(corpus_span, row['correct_ent_type'], int(row['doc_offset']))
         elif row['error_type'] == 'Wrong':
@@ -271,6 +265,17 @@ def process_label_file(dataset_fold, dataset_file, csv_patch_file, csv_encoding=
                 continue
             dataset.correct_tag(row['corpus_span'], row['correct_ent_type'], int(row['doc_offset']))
             dataset.correct_span(row['corpus_span'], row['correct_span'], int(row['doc_offset']))
+
+    for index, row in csv_patch.iterrows():
+        if row['error_type'] == 'Missing':
+            if isinstance(row['correct_span'], float) and math.isnan(row['correct_span']):
+                print(f'[WARNING] Correct span for line {index} is empty. Skipping...', file=sys.stderr)
+                continue
+            if isinstance(row['correct_ent_type'], float) and math.isnan(row['correct_ent_type']):
+                print(f'[WARNING] correct ent type for line {index} are empty. row: {row}. Skipping...',
+                      file=sys.stderr)
+                continue
+            dataset.correct_missing(row['correct_span'], row['correct_ent_type'], int(row['doc_offset']))
 
     result = dataset.save()
 
