@@ -363,7 +363,7 @@ num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corp
 10,test,18,"[290, 298): 'Victoria'",LOC,None,,ORG,,,,,,
 10,test,19,"[38, 53): 'AUSTRALIAN TOUR'",MISC,None,,,,,,,,
 10,test,19,"[1611, 1632): 'Sydney Cricket Ground'",ORG,None,,LOC,,,,,,
-10,test,27,"[565, 573): 'X-DENVER'",ORG,Token,,,"[567, 573): 'DENVER'",,"""X-"" prefix is a footnote, meaning ""CLINCHED DIVISION TITLE""",,,
+10,test,27,"[565, 573): 'X-DENVER'",ORG,Token,"[565, 573): 'X-DENVER'",,"[567, 573): 'DENVER'",ORG,"""X-"" prefix is a footnote, meaning ""CLINCHED DIVISION TITLE""",,,
 10,test,29,"[65, 73): 'LOMBARDI'",PER,None,"[65, 79): 'LOMBARDI AWARD'",MISC,,,,,,
 10,test,31,"[561, 568): 'Schalke'",ORG,None,"[561, 571): 'Schalke 04'",,,,,,,
 10,test,43,"[317, 322): 'Sport'",ORG,None,"[302, 322): 'Gazzetta dello Sport'",,,,,,,

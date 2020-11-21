@@ -110,7 +110,7 @@ num_models,fold,doc_offset,model_span,model_ent_type,error_type,corpus_span,corp
 15,train,99,"[61, 66): 'Mich.'",LOC,None,"[61, 65): 'Mich'",LOC,,,Ambiguous: Sentence boundary in the middle of the dateline; otherwise period would be unambiguously part of the abbreviation,,,
 12,train,103,"[528, 549): 'French Roman Catholic'",MISC,None,"[528, 534): 'French'",MISC,,,,,,
 12,train,107,"[867, 874): 'Yevgeny'",PER,None,"[867, 883): 'Yevgeny Primakov'",PER,,,,,,
-17,train,115,"[17, 27): 'FOCUS-News'",ORG,Token,,,"[23, 27): 'News'",ORG,"Tokenizer treats ""FOCUS-News"" as a single token; ""News"" == ""News Corp""",,,
+17,train,115,"[17, 27): 'FOCUS-News'",ORG,Token,"[17, 27): 'FOCUS-News'",,"[23, 27): 'News'",ORG,"Tokenizer treats ""FOCUS-News"" as a single token; ""News"" == ""News Corp""",,,
 17,train,119,"[11, 16): 'Thais'",MISC,Missing,,,,,,,,
 12,train,119,"[826, 831): 'Vivit'",PER,Missing,,,,,,,,
 14,train,120,"[158, 166): 'YEAR-AGO'",ORG,None,,,,,,,,
