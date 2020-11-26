@@ -50,7 +50,7 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 0,dev,15,"[109, 133): 'National Football League'",ORG,Tag,,MISC,"Leagues should be tagged MISC, per the rubric",,,
 1,dev,15,"[11, 14): 'NFL'",ORG,Tag,,MICC,"Leagues should be tagged MISC, per the rubric",,,
 0,dev,15,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'",MISC,Wrong,,,"FOOTBALL-RANDALL treated as a single token; ""AMERICAN FOOTBALL"" is the generic name of a sport, not a named entity",,,
-1,dev,15,"[41, 51): 'CUNNINGHAM'",PER,Token,"[32, 51): 'RANDALL CUNNINGHAM'",PER,See previous line,,,
+1,dev,15,"[41, 51): 'CUNNINGHAM'",PER,Token,"[33, 51): 'RANDALL CUNNINGHAM'",PER,See previous line,,,
 4,dev,16,"[175, 202): 'Brown Deer Park Golf Course'",LOC,None,,,,,,
 0,dev,16,"[407, 413): 'Willie'",PER,Sentence,"[407, 418): 'Willie Wood'",PER,,,,
 0,dev,16,"[414, 418): 'Wood'",PER,Sentence,"[407, 418): 'Willie Wood'",PER,,,,

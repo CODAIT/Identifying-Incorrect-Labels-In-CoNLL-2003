@@ -873,7 +873,7 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 1,train,734,"[11, 31): 'BALANCE-Water Dist 1'",MISC,Token,"[19, 31): 'Water Dist 1'",ORG,,,,
 0,train,734,"[189, 196): 'MOODY'S'",ORG,None,,,,,,
 2,train,734,"[45, 48): 'Kan'",LOC,Sentence,"[45, 49): 'Kan.'",,Incorrect sentence boundary led to period not being included in abbreviation,,,
-0,train,734,"[64, 80): 'WATER DISTRICT 1'",MISC,None,,,,,,
+0,train,734,"[64, 80): 'WATER DISTRICT 1'",MISC,Tag,,ORG,,,,
 0,train,734,"[84, 94): 'JOHNSON CO'",ORG,Sentence,"[84, 95): 'JOHNSON CO.'",,Incorrect sentence boundary led to period not being included in abbreviation,,,
 0,train,734,"[98, 100): 'KS'",LOC,None,,,,,,
 2,train,735,"[736, 743): 'Edouard'",MISC,None,,,Name of hurricane,,,
