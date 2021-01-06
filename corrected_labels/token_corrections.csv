@@ -1,123 +1,409 @@
-,fold,line_no,doc_offset,corpus_span,correct_span,correct_line
-0,test,1131.0,3.0,"[21, 37): 'SKIING-WORLD CUP'","[28, 37): 'WORLD CUP'","SKIING NNP I-NP I-MISC
-- : OI-MISC
+fold,line_no,doc_offset,corpus_span,correct_span,correct_ent_type,target_line,context,correct_line
+test,1131,3,"[21, 37): 'SKIING-WORLD CUP'","[28, 37): 'WORLD CUP'",MISC,SKIING-WORLD NNP I-NP I-MISC,"FREESTYLE NNP I-NP O
+SKIING-WORLD NNP I-NP I-MISC
+CUP NNP I-NP I-MISC
+MOGUL NNP I-NP O","SKIING NNP I-NP O
+- NNP I-NP O
 WORLD NNP I-NP I-MISC"
-2,test,6545.0,27.0,"[565, 573): 'X-DENVER'","[567, 573): 'DENVER'","X  IN I-PP O
-- : 0 0
+test,5687,25,"[24, 38): 'FOOTBALL-COLTS'","[33, 38): 'COLTS'",ORG,FOOTBALL-COLTS NNS I-NP O,"NFL NNP I-NP I-ORG
+AMERICAN NNP I-NP O
+FOOTBALL-COLTS NNS I-NP O
+CLOBBER NNP I-NP O
+EAGLES NNP I-NP I-ORG","FOOTBALL NNS I-NP O
+- NNS I-NP O
+COLTS NNS I-NP I-ORG"
+test,6545,27,"[565, 573): 'X-DENVER'","[567, 573): 'DENVER'",ORG,X-DENVER NNP I-NP I-MISC,"PA NNP I-NP O
+
+X-DENVER NNP I-NP I-MISC
+12 CD I-NP O
+1 CD I-NP O","X NNP I-NP O
+- NNP I-NP O
 DENVER NNP I-NP I-MISC"
-4,test,6640.0,27.0,"[889, 900): 'Y-GREEN BAY'","[891, 900): 'GREEN BAY'","YNNP I-NP O
-- : O O 
+test,6640,27,"[889, 900): 'Y-GREEN BAY'","[891, 900): 'GREEN BAY'",ORG,Y-GREEN NNP I-NP I-MISC,"PA NNP I-NP O
+
+Y-GREEN NNP I-NP I-MISC
+BAY NNP I-NP I-MISC
+10 CD I-NP O","Y NNP I-NP O
+- NNP I-NP O
 GREEN NNP I-NP I-MISC"
-5,test,6851.0,29.0,"[25, 44): 'FOOTBALL-OHIO STATE'","[34, 44): 'OHIO STATE'","FOOTBALL NNP I-NP O
-- : O O
+test,6851,29,"[25, 44): 'FOOTBALL-OHIO STATE'","[34, 44): 'OHIO STATE'",ORG,FOOTBALL-OHIO NNP I-NP I-MISC,"NCAA NNP I-NP I-ORG
+AMERICAN NNP I-NP O
+FOOTBALL-OHIO NNP I-NP I-MISC
+STATE NNP I-NP I-MISC
+'S POS B-NP O","FOOTBALL NNP I-NP O
+- NNP I-NP O
 OHIO NNP I-NP I-MISC"
-6,test,8644.0,39.0,"[1158, 1175): 'AbelardoFernandez'","[1158, 1175): 'Abelardo Fernandez'","Abelardo NNS I-NP I-PER
+test,8644,39,"[1158, 1175): 'AbelardoFernandez'","[1158, 1175): 'Abelardo Fernandez'",PER,AbelardoFernandez NNS I-NP I-PER,"25-1 NNP I-NP O
+
+AbelardoFernandez NNS I-NP I-PER
+
+40-1 JJ I-NP O","Abelardo NNS I-NP I-PER
 Fernandez NNS I-NP I-PER"
-8,test,12068.0,54.0,"[11, 27): 'INTERVIEW-ZYWIEC'","[21, 27): 'ZYWIEC'","INTERVIEW NNP I-NP O
-- : O O
-ZYWIEC NNP I-NP I-MISC"
-13,test,13001.0,56.0,"[11, 16): 'UK-US'","[11, 13): 'UK'","UK NNP I-NP I-MISC
-- : O O 
-US NNP I-NP I-MISC"
-15,test,14467.0,63.0,"[19, 39): 'office-Conservatives'","[26, 39): 'Conservatives'  ","office NNP I-NP O
-- : O O
-Conservatives JJ I-NP I-MISC"
-20,test,16319.0,75.0,"[2736, 2752): 'Newmont-Santa Fe'","[2736, 2743): 'Newmont'","NewmontNNP I-NP I-ORG
-- : O O
-Santa NNP I-NP I-ORG"
-21,test,26720.0,114.0,"[11, 17): 'Iowa-S'","[11, 15): 'Iowa'","Iowa I-NP I-LOC
-- : O O
-S NNP I-NP I-LOC"
-22,test,26728.0,114.0,"[51, 61): 'sales-USDA'","[57, 61): 'USDA'","sales NNP I-NP O
-- : O O
-USDA NN I-NP I-MISC"
-23,test,28718.0,123.0,"[11, 17): 'Iowa-S'","[11, 15): 'Iowa'  ","Iowa NNP I-NP I-LOC
-- : O O
-S NNP I-NP I-LOC"
-24,test,38688.0,178.0,"[951, 960): 'then-U.S.'","[956, 960): 'U.S.'","then RB I-ADVP O
-- : O O
-U.S. JJ I-NP I-MISC"
-25,test,39979.0,183.0,"[18, 35): 'SKIING-GLADISHIVA'","[25, 35): 'GLADISHIVA'","SKIING NNP I-NP O
-- : O O
-GLADISHIVA NNP I-NP I-MISC"
-27,test,41169.0,188.0,"[18, 34): 'SKIING-WORLD CUP'","[25, 34): 'WORLD CUP'","SKIING NNP I-NP O
-- : O O
-WORLD NNP I-NP I-MISC"
-28,test,41413.0,190.0,"[11, 27): 'BOBSLEIGH-SHIMER'","[21, 27): 'SHIMER'","BOBSLEIGH NNP I-NP O
-- : O O
-SHIMER NNP I-NP I-MISC"
-29,test,41595.0,191.0,"[11, 25): 'SKIING-CHINESE'","[18, 25): 'CHINESE'","SKIING NNP I-NP O
-- : O O
-CHINESE JJ I-NP I-MISC"
-30,test,41850.0,192.0,"[11, 30): 'BOBSLEIGH-WORLD CUP'","[21, 30): 'WORLD CUP'","BOBSLEIGH NNP I-NP O
-- : O O
-WORLD NNP I-NP I-MISC"
-31,test,42385.0,194.0,"[21, 37): 'SKIING-WORLD CUP'","[28, 37): 'WORLD CUP'","SKIING NNP I-NP O
--: O O
-WORLD NNP I-NP I-MISC"
-33,test,46987.0,214.0,"[243, 262): 'Saturday'sWorld Cup'","[253, 262): 'World Cup'","Saturday NNP I-NP O
+test,8709,40,"[215, 236): 'Real Madrid-Barcelona'","[215, 226): 'Real Madrid'",ORG,Real NNP I-NP I-MISC,"'s POS B-NP O
+big JJ I-NP O
+Real NNP I-NP I-MISC
+Madrid-Barcelona NNP I-NP I-MISC
+game NN I-NP O",Real NNP I-NP I-ORG
+test,8710,40,"[215, 236): 'Real Madrid-Barcelona'","[227, 236): 'Barcelona'",ORG,Madrid-Barcelona NNP I-NP I-MISC,"'s POS B-NP O
+big JJ I-NP O
+Real NNP I-NP I-MISC
+Madrid-Barcelona NNP I-NP I-MISC
+game NN I-NP O","Madrid NNP I-NP I-ORG
+- NNP I-NP O
+Barcelona NNP I-NP I-ORG"
+test,12068,54,"[11, 27): 'INTERVIEW-ZYWIEC'","[21, 27): 'ZYWIEC'",ORG,INTERVIEW-ZYWIEC NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+INTERVIEW-ZYWIEC NNP I-NP I-MISC
+SEES NNP I-NP O
+NO DT I-NP O","INTERVIEW NNP I-NP O
+- NNP I-NP O
+ZYWIEC NNP I-NP I-ORG"
+test,13001,56,"[11, 16): 'UK-US'","[11, 13): 'UK'",LOC,UK-US NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+UK-US NNP I-NP I-MISC
+open JJ I-NP O
+skies NNS I-NP O","UK NNP I-NP I-LOC
+- NNP I-NP O
+US NNP I-NP I-LOC"
+test,13001,56,"[11, 16): 'UK-US'","[14, 16): 'US'",LOC,UK-US NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+UK-US NNP I-NP I-MISC
+open JJ I-NP O
+skies NNS I-NP O","UK NNP I-NP I-LOC
+- NNP I-NP O
+US NNP I-NP I-LOC"
+test,14467,63,"[19, 39): 'office-Conservatives'","[26, 39): 'Conservatives'",ORG,office-Conservatives JJ I-NP I-MISC,"Major NNP I-NP I-PER
 's POS B-NP O
-World NNP B-NP I-MISC"
-34,dev,4120.0,15.0,"[41, 51): 'CUNNINGHAM'","(33, 51]: 'RANDALL CUNNINGHAM'","FOOTBALL NNP I-NP O
-- : O O
-RANDALL NNP I-NP I-MISC"
-35,dev,4118.0,15.0,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'","[15, 32): 'AMERICAN FOOTBALL'","FOOTBALL NNP I-NP O
-- : O O
-RANDALL NNP I-NP I-MISC"
-36,dev,10619.0,39.0,"[11, 23): 'Boxing-Bruno'","[18, 23): 'Bruno'","Boxing NNP I-NP O
-- : O O
-Bruno NN I-NP I-MISC"
-38,dev,15911.0,60.0,"[1358, 1371): 'Tripoli-based'","[1358, 1365): 'Tripoli'","Tripoli NNP I-NP I-LOC
-- : O O
-based JJ I-NP I-MISC"
-39,dev,19233.0,65.0,"[1125, 1134): 'asset-St.'","[1131, 1146): 'St. Louis based'","asset NNP I-NP O
-- : O O
-St NN I-NP I-MISC"
-40,dev,19130.0,65.0,"[592, 607): 'St. Louis-based'","[592, 601): 'St. Louis'","Louis NNP I-NP I-LOC
-- : O O
-based JJ I-NP I-MISC"
-41,dev,44837.0,175.0,"[252, 264): 'London-based'","[252, 258): 'London'","London NNP I_NP I-LOC
-- : O O
-based JJ I-NP I-MISC"
-42,dev,46457.0,181.0,"[1761, 1774): 'Moscow-backed'","[1761, 1767): 'Moscow'","Moscow NNP I-NP I-ORG
-- : O O
-backed JJ I-NP I-MISC"
-43,dev,50964.0,198.0,"[39, 47): 'aid-U.N.'","[43, 47): 'U.N.'","aid NN I-NP O
-- . O O
-U.N. NN I-NP I-ORG"
-44,train,17719.0,80.0,,"[44, 59): 'Interfax'","rebels NNP I-PP O
-- . O O
-Interfax NN I-NP O"
-47,train,37914.0,163.0,"[220, 232): 'x-AEK Athens'","[222, 232): 'AEK Athens'","x NNP I-NP O
-- . O O
-AEK IN I-NP I-ORG"
-48,train,37926.0,163.0,"[271, 283): 'x-Olympiakos'","[273, 283): 'Olympiakos'","x NNP I-NP O
-- . O O
-Olympiakos NNS I-NP I-ORG"
-49,train,37933.0,163.0,"[308, 313): 'x-PAO'","[310, 313): 'PAO'","x NNP I-NP O
-- . O O
-PAO JJ I-NP I-ORG"
-50,train,38844.0,169.0,"[50, 61): 'trip-Canada'","[55, 61): 'Canada'","trip NNP I-NP O
-- . O O 
-Canada NN I-NP I-MISC"
-51,train,65636.0,298.0,"[49, 60): '1997--Ruehe'","[55, 60): 'Ruehe'","1997CD I-NP O
- -- : O O
-Ruehe CD I-NP I-MISC"
-52,train,75410.0,343.0,"[11, 31): 'AUSTRALIAN RULES-AFL'","[11, 21): 'AUSTRALIAN'","RULES NNP I-NP O
-- : O O
-AFL NNP I-NP I-MISC"
-53,train,95553.0,422.0,"[236, 246): 'Videoton(*'","[236, 244): 'Videoton'","Videoton NN I-NP I-ORG
+office-Conservatives JJ I-NP I-MISC
+still RB I-ADVP O
+have VB I-VP O","office JJ I-NP O
+- JJ I-NP O
+Conservatives JJ I-NP I-ORG"
+test,16319,75,"[2736, 2752): 'Newmont-Santa Fe'","[2736, 2743): 'Newmont'",ORG,Newmont-Santa NNP I-NP I-MISC,"( ( O O
+a DT I-NP O
+Newmont-Santa NNP I-NP I-MISC
+Fe NNP I-NP I-MISC
+deal NN I-NP O","Newmont NNP I-NP I-ORG
+- NNP I-NP O
+Santa NNP I-NP I-ORG"
+test,16320,75,"[2736, 2752): 'Newmont-Santa Fe'","[2744, 2752): 'Santa Fe'",ORG,Fe NNP I-NP I-MISC,"( ( O O
+a DT I-NP O
+Newmont-Santa NNP I-NP I-MISC
+Fe NNP I-NP I-MISC
+deal NN I-NP O",Fe NNP I-NP I-ORG
+test,26720,114,"[11, 17): 'Iowa-S'","[11, 15): 'Iowa'",LOC,Iowa-S NNP I-NP I-LOC,"DOCSTART -X- -X- O
+
+Iowa-S NNP I-NP I-LOC
+Minn NNP I-NP B-LOC
+fed VBN I-VP O","Iowa NNP I-NP I-LOC
+- NNP I-NP O
+S NNP I-NP I-LOC"
+test,26721,114,"[18, 22): 'Minn'","[16, 22): 'S Minn'",LOC,Minn NNP I-NP B-LOC,"Iowa-S NNP I-NP I-LOC
+Minn NNP I-NP B-LOC
+fed VBN I-VP O
+cattle NNS I-NP O",Minn NNP I-NP I-LOC
+test,26728,114,"[51, 61): 'sales-USDA'","[57, 61): 'USDA'",ORG,sales-USDA NN I-NP I-MISC,", , O O
+no DT I-NP O
+sales-USDA NN I-NP I-MISC
+. . O O","sales NN I-NP O
+- NN I-NP O
+USDA NN I-NP I-MISC"
+test,28718,123,"[11, 17): 'Iowa-S'","[11, 15): 'Iowa'",LOC,Iowa-S NNP I-NP I-LOC,"DOCSTART -X- -X- O
+
+Iowa-S NNP I-NP I-LOC
+Minn NNP I-NP B-LOC
+feedlot NN I-NP O","Iowa NNP I-NP I-LOC
+- NNP I-NP O
+S NNP I-NP I-LOC"
+test,28719,123,"[18, 22): 'Minn'","[16, 22): 'S Minn'",LOC,Minn NNP I-NP B-LOC,"Iowa-S NNP I-NP I-LOC
+Minn NNP I-NP B-LOC
+feedlot NN I-NP O
+cattle NNS I-NP O",Minn NNP I-NP I-LOC
+test,38688,178,"[951, 960): 'then-U.S.'","[956, 960): 'U.S.'",LOC,then-U.S. JJ I-NP I-MISC,"vandalism NN I-NP O
+, , O O
+then-U.S. JJ I-NP I-MISC
+Trade NNP I-NP O
+Representative NNP I-NP O","then JJ I-NP O
+- JJ I-NP O
+U.S. JJ I-NP I-LOC"
+test,39979,183,"[18, 35): 'SKIING-GLADISHIVA'","[25, 35): 'GLADISHIVA'",PER,SKIING-GLADISHIVA NNP I-NP I-MISC,"ALPINE NNP I-NP O
+SKIING-GLADISHIVA NNP I-NP I-MISC
+WINS VBZ I-VP O
+WORLD NN I-NP I-MISC","SKIING NNP I-NP O
+- NNP I-NP O
+GLADISHIVA NNP I-NP I-PER"
+test,40619,186,"[1398, 1409): 'Austria)118'","[1398, 1405): 'Austria'",LOC,Austria)118 NNP I-NP O,"Meissnitzer NNP I-NP I-PER
 ( ( O O
-* SYM O O"
-54,train,139024.0,593.0,"[45, 57): 'France-Juppe'","[45, 51): 'France'","France NNP I-NP I-LOC
-- . O O
+Austria)118 NNP I-NP O
+
+15. CD I-NP O","Austria NNP I-NP I-LOC
+) NNP I-NP O
+118 NNP I-NP O"
+test,41169,188,"[18, 34): 'SKIING-WORLD CUP'","[25, 34): 'WORLD CUP'",MISC,SKIING-WORLD NNP I-NP I-MISC,"NORDIC NNP I-NP O
+SKIING-WORLD NNP I-NP I-MISC
+CUP NNP I-NP I-MISC
+BIATHLON NNP I-NP O","SKIING NNP I-NP O
+- NNP I-NP O
+WORLD NNP I-NP I-MISC"
+test,41413,190,"[11, 27): 'BOBSLEIGH-SHIMER'","[21, 27): 'SHIMER'",PER,BOBSLEIGH-SHIMER NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+BOBSLEIGH-SHIMER NNP I-NP I-MISC
+PILOTS NNP I-NP O
+USA NNP I-NP I-ORG","BOBSLEIGH NNP I-NP O
+- NNP I-NP O
+SHIMER NNP I-NP I-PER"
+test,41595,191,"[11, 25): 'SKIING-CHINESE'","[18, 25): 'CHINESE'",LOC,SKIING-CHINESE JJ I-NP I-MISC,"DOCSTART -X- -X- O
+
+SKIING-CHINESE JJ I-NP I-MISC
+MAKE VB I-VP O
+PROMISING NN I-NP O","SKIING JJ I-NP O
+- JJ I-NP O
+CHINESE JJ I-NP I-MISC"
+test,41850,192,"[11, 30): 'BOBSLEIGH-WORLD CUP'","[21, 30): 'WORLD CUP'",,BOBSLEIGH-WORLD NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+BOBSLEIGH-WORLD NNP I-NP I-MISC
+CUP NNP I-NP I-MISC
+TWO-MAN NNP I-NP O","BOBSLEIGH NNP I-NP O
+- NNP I-NP O
+WORLD NNP I-NP I-MISC"
+test,42385,194,"[21, 37): 'SKIING-WORLD CUP'","[28, 37): 'WORLD CUP'",,SKIING-WORLD NNP I-NP I-MISC,"FREESTYLE NNP I-NP O
+SKIING-WORLD NNP I-NP I-MISC
+CUP NNP I-NP I-MISC
+AERIALS NNP I-NP O","SKIING NNP I-NP O
+- NNP I-NP O
+WORLD NNP I-NP I-MISC"
+test,46987,214,"[243, 262): 'Saturday'sWorld Cup'","[253, 262): 'World Cup'",MISC,Saturday'sWorld NNP B-NP I-MISC,"on IN I-PP O
+next JJ I-NP O
+Saturday'sWorld NNP B-NP I-MISC
+Cup NNP I-NP I-MISC
+group NN I-NP O","Saturday NNP B-NP O
+'s NNP B-NP O
+World NNP B-NP I-MISC"
+dev,4119,15,"[41, 51): 'CUNNINGHAM'","[33, 51): 'RANDALL CUNNINGHAM'",PER,FOOTBALL-RANDALL NNP I-NP I-MISC,"AMERICAN NNP I-NP I-MISC
+FOOTBALL-RANDALL NNP I-NP I-MISC
+CUNNINGHAM NNP I-NP I-PER
+RETIRES NNP I-NP O
+. . O O","FOOTBALL NNP I-NP O
+- NNP I-NP O
+RANDALL NNP I-NP I-PER"
+dev,10619,39,"[11, 23): 'Boxing-Bruno'","[18, 23): 'Bruno'",PER,Boxing-Bruno NN I-NP I-MISC,"DOCSTART -X- -X- O
+
+Boxing-Bruno NN I-NP I-MISC
+quits VBZ I-VP O
+on IN I-PP O","Boxing NN I-NP O
+- NN I-NP O
+Bruno NN I-NP I-PER"
+dev,15911,60,"[1358, 1371): 'Tripoli-based'","[1358, 1365): 'Tripoli'",LOC,Tripoli-based JJ I-NP I-MISC,". . O O
+
+Tripoli-based JJ I-NP I-MISC
+diplomats NNS I-NP O
+and CC O O","Tripoli JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,19233,65,"[1125, 1134): 'asset-St.'","[1131, 1140): 'St. Louis'",LOC,asset-St NN I-NP I-MISC,"9.33 CD I-NP O
+billion CD I-NP O
+asset-St NN I-NP I-MISC
+. . O I-MISC",asset NN I-NP O
+dev,19234,65,"[1125, 1134): 'asset-St.'","[1131, 1140): 'St. Louis'",LOC,. . O I-MISC,"9.33 CD I-NP O
+billion CD I-NP O
+asset-St NN I-NP I-MISC
+. . O I-MISC",- NN I-NP O
+dev,19235,65,"[1125, 1134): 'asset-St.'","[1131, 1140): 'St. Louis'",LOC,,"9.33 CD I-NP O
+billion CD I-NP O
+asset-St NN I-NP I-MISC
+. . O I-MISC
+",St. NN I-NP I-LOC
+dev,19236,65,"[1125, 1134): 'asset-St.'","[1131, 1140): 'St. Louis'",LOC,Louis NNP I-NP I-MISC,"billion CD I-NP O
+asset-St NN I-NP I-MISC
+. . O I-MISC
+
+Louis NNP I-NP I-MISC",Louis NNP I-NP I-LOC
+dev,19282,65,"[1359, 1376): 'Minneapolis-based'","[1359, 1370): 'Minneapolis'",LOC,Minneapolis-based JJ I-NP I-MISC,"Missouri NNP I-NP I-LOC
+are VBP I-VP O
+Minneapolis-based JJ I-NP I-MISC
+First NNP I-NP I-ORG
+Bank NNP I-NP I-ORG","Minneapolis JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,19291,65,"[1419, 1429): 'Ohio-based'","[1419, 1423): 'Ohio'",LOC,Ohio-based JJ I-NP I-MISC,"Corp. NNP I-NP I-ORG
+, , I-NP O
+Ohio-based JJ I-NP I-MISC
+KeyCorp NNP I-NP I-ORG
+and CC O O","Ohio JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,19130,65,"[592, 607): 'St. Louis-based'","[592, 601): 'St. Louis'",LOC,St. NNP I-NP I-MISC,""" "" O O
+
+St. NNP I-NP I-MISC
+Louis-based JJ I-NP I-MISC
+Mercantile NNP I-NP I-ORG",St. NNP I-NP I-LOC
+dev,19131,65,"[592, 607): 'St. Louis-based'","[592, 601): 'St. Louis'",LOC,Louis-based JJ I-NP I-MISC,""" "" O O
+
+St. NNP I-NP I-MISC
+Louis-based JJ I-NP I-MISC
+Mercantile NNP I-NP I-ORG","Louis JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,19168,65,"[793, 802): 'Mo.-based'","[793, 796): 'Mo.'",LOC,Mo.-based JJ I-NP I-MISC,"City NNP I-NP I-LOC
+, , I-NP O
+Mo.-based JJ I-NP I-MISC
+Commerce NNP I-NP I-ORG
+Bancshares NNP I-NP I-ORG","Mo. JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,44837,175,"[252, 264): 'London-based'","[252, 258): 'London'",LOC,London-based JJ I-NP I-MISC,"A DT I-NP O
+London-based JJ I-NP I-MISC
+spokesman NN I-NP O
+of IN I-PP O","London JJ I-NP I-LOC
+- JJ I-NP O
+based JJ I-NP O"
+dev,46457,181,"[1761, 1774): 'Moscow-backed'","[1761, 1767): 'Moscow'",LOC,Moscow-backed JJ I-NP I-MISC,"Chechnya NNP I-NP I-LOC
+and CC I-NP O
+Moscow-backed JJ I-NP I-MISC
+leader NN I-NP O
+Doku NNP B-NP I-PER","Moscow JJ I-NP I-LOC
+- JJ I-NP O
+backed JJ I-NP O"
+dev,50964,198,"[39, 47): 'aid-U.N.'","[43, 47): 'U.N.'",ORG,aid-U.N. NN I-NP I-MISC,"Iraqi JJ I-NP I-MISC
+military JJ I-NP O
+aid-U.N. NN I-NP I-MISC
+official NN I-NP O
+. . O O","aid NN I-NP O
+- NN I-NP O
+U.N. NN I-NP I-ORG"
+train,17720,80,"[44, 59): 'rebels-Interfax'","[51, 59): 'Interfax'",ORG,rebels-Interfax NN I-NP O,"clash NN I-NP O
+with IN I-PP O
+rebels-Interfax NN I-NP O
+. . O O","rebels NN I-NP O
+- NN I-NP O
+Interfax NN I-NP I-ORG"
+train,26117,115,"[17, 27): 'FOCUS-News'","[23, 27): 'News'",ORG,FOCUS-News JJ I-NP O,"RTRS NNS I-NP I-ORG
+- : O O
+FOCUS-News JJ I-NP O
+forecasts NNS I-NP O
+alien-led JJ I-NP O","FOCUS JJ I-NP O
+- JJ I-NP O
+News JJ I-NP I-ORG"
+train,37914,163,"[220, 232): 'x-AEK Athens'","[222, 232): 'AEK Athens'",ORG,x-AEK IN I-NP I-ORG,": : O O
+
+x-AEK IN I-NP I-ORG
+Athens NNP I-NP I-ORG
+( ( O O","x IN I-NP O
+- IN I-NP O
+AEK IN I-NP I-ORG"
+train,37926,163,"[271, 283): 'x-Olympiakos'","[273, 283): 'Olympiakos'",ORG,x-Olympiakos NNS I-NP I-ORG,") ) O O
+
+x-Olympiakos NNS I-NP I-ORG
+v IN I-NP O
+Ferencvaros NNP I-NP I-ORG","x NNS I-NP O
+- NNS I-NP O
+Olympiakos NNS I-NP I-ORG"
+train,37933,163,"[308, 313): 'x-PAO'","[310, 313): 'PAO'",ORG,x-PAO JJ I-NP I-ORG,") ) O O
+
+x-PAO JJ I-NP I-ORG
+v IN I-NP O
+Legia NNP I-NP I-ORG","x JJ I-NP O
+- JJ I-NP O
+PAO JJ I-NP I-ORG"
+train,38844,169,"[50, 61): 'trip-Canada'","[55, 61): 'Canada'",LOC,trip-Canada NN I-NP I-MISC,"jeopardize VBP I-VP O
+Commonwealth NNP I-NP I-ORG
+trip-Canada NN I-NP I-MISC
+. . O O","trip NN I-NP O
+- NN I-NP O
+Canada NN I-NP I-LOC"
+train,44449,198,"[11, 20): 'WSC-India'","[11, 14): 'WSC'",ORG,WSC-India NNP I-NP I-ORG,"DOCSTART -X- -X- O
+
+WSC-India NNP I-NP I-ORG
+Rice NNP I-NP O
+Weather NNP I-NP O","WSC NNP I-NP I-ORG
+- NNP I-NP O
+India NNP I-NP I-LOC"
+train,44449,198,"[11, 20): 'WSC-India'","[15, 20): 'India'",LOC,WSC-India NNP I-NP I-ORG,"DOCSTART -X- -X- O
+
+WSC-India NNP I-NP I-ORG
+Rice NNP I-NP O
+Weather NNP I-NP O","WSC NNP I-NP I-ORG
+- NNP I-NP O
+India NNP I-NP I-LOC"
+train,65636,298,"[49, 60): '1997--Ruehe'","[55, 60): 'Ruehe'",PER,1997--Ruehe CD I-NP I-MISC,"Bosnia NNP I-NP I-LOC
+for IN I-PP O
+1997--Ruehe CD I-NP I-MISC
+. . O O","1997 CD I-NP O
+-- CD I-NP O
+Ruehe CD I-NP I-PER"
+train,75411,343,"[11, 31): 'AUSTRALIAN RULES-AFL'","[11, 21): 'AUSTRALIAN'",MISC,RULES-AFL NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+AUSTRALIAN NNP I-NP I-MISC
+RULES-AFL NNP I-NP I-MISC
+RESULTS NNP I-NP O","RULES NNP I-NP I-MISC
+- NNP I-NP O
+AFL NNP I-NP I-MISC"
+train,75411,343,"[11, 31): 'AUSTRALIAN RULES-AFL'","[28, 31): 'AFL'",MISC,RULES-AFL NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+AUSTRALIAN NNP I-NP I-MISC
+RULES-AFL NNP I-NP I-MISC
+RESULTS NNP I-NP O","RULES NNP I-NP I-MISC
+- NNP I-NP O
+AFL NNP I-NP I-MISC"
+train,95553,422,"[236, 246): 'Videoton(*'","[236, 244): 'Videoton'",,Videoton(* NN I-NP I-ORG,"Csepel NN I-NP I-ORG
+1 CD I-NP O
+Videoton(* NN I-NP I-ORG
+) ) O O
+1 CD I-NP O","Videoton NN I-NP I-ORG
+( NN I-NP O
+* NN I-NP O"
+train,102338,444,"[20, 40): 'SCOREBOARD-AUSTRALIA'","[31, 40): 'AUSTRALIA'",ORG,SCOREBOARD-AUSTRALIA NNP I-NP I-MISC,"CRICKET NNP I-NP O
+- : O O
+SCOREBOARD-AUSTRALIA NNP I-NP I-MISC
+V NNP I-NP O
+ZIMBABWE NNP I-NP I-LOC","SCOREBOARD NNP I-NP O
+- NNP I-NP O
+AUSTRALIA NNP I-NP I-ORG"
+train,139024,593,"[45, 57): 'France-Juppe'","[45, 51): 'France'",LOC,France-Juppe JJ I-NP I-MISC,"for IN I-PP O
+gloomy JJ I-NP O
+France-Juppe JJ I-NP I-MISC
+. . O O","France JJ I-NP I-LOC
+- JJ I-NP I-MISC
 Juppe JJ I-NP I-PER"
-55,train,146605.0,626.0,"[42, 59): 'disarmament-China'","[42, 59): 'disarmament-China'","disarmament NNP I-NP O
-- . O O
+train,139024,593,"[45, 57): 'France-Juppe'","[52, 57): 'Juppe'",PER,France-Juppe JJ I-NP I-MISC,"for IN I-PP O
+gloomy JJ I-NP O
+France-Juppe JJ I-NP I-MISC
+. . O O","France JJ I-NP I-LOC
+- JJ I-NP I-MISC
+Juppe JJ I-NP I-PER"
+train,146605,626,"[42, 59): 'disarmament-China'","[54, 59): 'China'",LOC,disarmament-China NN I-NP I-MISC,"step NN I-NP O
+to TO I-VP O
+disarmament-China NN I-NP I-MISC
+. . O O","disarmament NN I-NP O
+- NN I-NP O
 China NN I-NP I-LOC"
-56,train,164709.0,701.0,"[17, 30): 'union-England'","[23, 30): 'England'","union NNP I-NP O
-- . O O
+train,164709,701,"[17, 30): 'union-England'","[23, 30): 'England'",ORG,union-England JJ I-NP I-MISC,"Rugby JJ I-NP O
+union-England JJ I-NP I-MISC
+given VBN I-PP O
+final JJ I-NP O","union JJ I-NP O
+- JJ I-NP O
 England JJ I-NP I-ORG"
-57,train,213462.0,918.0,"[11, 24): 'INTERVIEW-T&N'","[11, 24): 'INTERVIEW-T&N'","INTERVIEW NNP I-NP O
-- . O O
-T&N NNP I-NP I-MISC"
+train,172643,734,"[11, 31): 'BALANCE-Water Dist 1'","[19, 31): 'Water Dist 1'",ORG,BALANCE-Water JJ I-NP I-MISC,"DOCSTART -X- -X- O
+
+BALANCE-Water JJ I-NP I-MISC
+Dist NN I-NP I-MISC
+1 CD I-NP I-MISC","BALANCE JJ I-NP O
+- JJ I-NP O
+Water JJ I-NP I-ORG"
+train,172644,734,"[11, 31): 'BALANCE-Water Dist 1'","[19, 31): 'Water Dist 1'",ORG,Dist NN I-NP I-MISC,"DOCSTART -X- -X- O
+
+BALANCE-Water JJ I-NP I-MISC
+Dist NN I-NP I-MISC
+1 CD I-NP I-MISC",Dist NN I-NP I-ORG
+train,172645,734,"[11, 31): 'BALANCE-Water Dist 1'","[19, 31): 'Water Dist 1'",ORG,1 CD I-NP I-MISC,"DOCSTART -X- -X- O
+
+BALANCE-Water JJ I-NP I-MISC
+Dist NN I-NP I-MISC
+1 CD I-NP I-MISC",1 CD I-NP I-ORG
+train,213462,918,"[11, 24): 'INTERVIEW-T&N'","[21, 24): 'T&N'",ORG,INTERVIEW-T&N NNP I-NP I-MISC,"DOCSTART -X- -X- O
+
+INTERVIEW-T&N NNP I-NP I-MISC
+untroubled VBN I-VP O
+by IN I-PP O","INTERVIEW NNP I-NP O
+- NNP I-NP O
+T&N NNP I-NP I-ORG"
