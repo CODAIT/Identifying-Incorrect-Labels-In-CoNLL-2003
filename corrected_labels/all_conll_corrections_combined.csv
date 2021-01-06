@@ -6,7 +6,7 @@ dev,2,"[525, 533): 'Scotland'",LOC,Tag,"[525, 533): 'Scotland'",ORG,Cricket team
 dev,2,"[61, 70): 'Australia'",LOC,Tag,"[61, 70): 'Australia'",ORG,Cricket team
 dev,2,"[760, 765): 'Leeds'",ORG,Tag,"[760, 765): 'Leeds'",LOC,
 dev,6,"[47, 56): 'VOLGOGRAD'",LOC,Tag,"[47, 56): 'VOLGOGRAD'",ORG,
-dev,7,"[993, 1003): 'Panamanian'",MISC,Both,"[993, 1022): 'Panamanian Boxing Association'",ORG,
+dev,7,"[1004, 1022): 'Boxing Association'",ORG,Span,"[993, 1022): 'Panamanian Boxing Association'",ORG,
 dev,11,"[1967, 1975): 'Republic'",LOC,Sentence,"[1961, 1975): 'Czech Republic'",LOC,
 dev,12,"[1247, 1254): 'CHICAGO'",LOC,Tag,"[1247, 1254): 'CHICAGO'",ORG,Team
 dev,12,"[1266, 1276): 'CINCINNATI'",LOC,Tag,"[1266, 1276): 'CINCINNATI'",ORG,Baseball team
@@ -30,18 +30,19 @@ dev,12,"[519, 535): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not co
 dev,12,"[819, 835): 'EASTERN DIVISION",MISC,Wrong,,,Divisions of leagues not considered entities
 dev,12,"[962, 978): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 dev,12,"[1095, 1111): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-dev,13,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",,
+dev,13,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",,"Sentence boundary between ""League"" and ""Baseball"""
+dev,13,,,Missing,"[96, 104): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 dev,14,,,Missing,"[452, 459): 'Stadium'",LOC,"""Stadium"" with a capital ""S"", referring to Arthur Ashe Stadium"
 dev,15,"[109, 133): 'National Football League'",ORG,Tag,"[109, 133): 'National Football League'",MISC,"Leagues should be tagged MISC, per the rubric"
-dev,15,"[11, 14): 'NFL'",ORG,Tag,"[11, 14): 'NFL'",MICC,"Leagues should be tagged MISC, per the rubric"
+dev,15,"[11, 14): 'NFL'",ORG,Tag,"[11, 14): 'NFL'",MISC,"Leagues should be tagged MISC, per the rubric"
 dev,15,"[41, 51): 'CUNNINGHAM'",PER,Token,"[33, 51): 'RANDALL CUNNINGHAM'",PER,See previous line
 dev,15,"[15, 40): 'AMERICAN FOOTBALL-RANDALL'",MISC,Wrong,,,"FOOTBALL-RANDALL treated as a single token; ""AMERICAN FOOTBALL"" is the generic name of a sport, not a named entity"
 dev,16,"[407, 413): 'Willie'",PER,Sentence,"[407, 418): 'Willie Wood'",PER,
 dev,16,"[414, 418): 'Wood'",PER,Sentence,"[407, 418): 'Willie Wood'",,Sentence boundary between first and last name
-dev,16,"[533, 538): 'Green'",PER,Sentence,"[529, 538): 'Ken Green'",PER,
+dev,16,"[529, 532): 'Ken'",PER,Sentence,"[529, 538): 'Ken Green'",PER,
+dev,16,"[533, 538): 'Green'",PER,Sentence,"[529, 538): 'Ken Green'",,Sentence boundary between first and last name
 dev,20,"[5423, 5433): 'Fredericks'",PER,Sentence,"[5415, 5433): 'Frankie Fredericks'",PER,
-dev,20,"[5643, 5649): 'George'",PER,Sentence,"[5643, 5665): 'George Panayiotopoulos'",PER,
-dev,20,"[5650, 5665): 'Panayiotopoulos'",PER,Sentence,"[5643, 5665): 'George Panayiotopoulos'",,Sentence boundary between first and last name
+dev,20,"[5650, 5665): 'Panayiotopoulos'",PER,Sentence,"[5643, 5665): 'George Panayiotopoulos'",PER,
 dev,20,"[90, 96): 'Berlin'",MISC,Sentence,"[90, 107): 'Berlin Grand Prix'",,
 dev,20,"[97, 107): 'Grand Prix'",MISC,Sentence,"[90, 107): 'Berlin Grand Prix'",MISC,Needs to be consistent with how the title is annotated
 dev,26,"[1381, 1386): 'India'",LOC,Tag,"[1381, 1386): 'India'",ORG,Cricket team
@@ -56,7 +57,8 @@ dev,26,"[104, 116): 'World Series'",MISC,Sentence,"[97, 116): 'Singer World Seri
 dev,28,"[20, 29): 'AUSTRALIA'",LOC,Tag,"[20, 29): 'AUSTRALIA'",ORG,Cricket team
 dev,28,"[244, 253): 'Australia'",LOC,Tag,"[244, 253): 'Australia'",ORG,Cricket team
 dev,28,"[291, 297): 'Damien'",PER,Sentence,"[291, 306): 'Damien Flemming'",PER,
-dev,28,"[358, 365): 'Ponting'",PER,Sentence,"[352, 365): 'Ricky Ponting'",PER,
+dev,28,"[352, 357): 'Ricky'",PER,Sentence,"[352, 365): 'Ricky Ponting'",PER,
+dev,28,"[358, 365): 'Ponting'",PER,Sentence,"[352, 365): 'Ricky Ponting'",,Sentence boundary between first and last name
 dev,28,"[417, 422): 'Waugh'",PER,Sentence,"[411, 422): 'Steve Waugh'",PER,
 dev,28,"[77, 86): 'Australia'",LOC,Tag,"[77, 86): 'Australia'",ORG,Cricket team
 dev,30,,,Missing,"[18, 21): 'NBP'",ORG,NBP == National Bank of Poland
@@ -162,7 +164,7 @@ dev,118,"[710, 720): 'Harlequins'",LOC,Tag,"[710, 720): 'Harlequins'",ORG,"Harle
 dev,118,"[858, 865): 'England'",LOC,Tag,"[858, 865): 'England'",ORG,Rugby team
 dev,118,"[11, 22): 'RUGBY UNION'",ORG,Wrong,,,Generic name of a sport: https://en.wikipedia.org/wiki/Rugby_union
 dev,124,"[597, 605): 'Al Unser'",PER,Span,"[597, 608): 'Al Unser Jr'",PER,
-dev,125,"[188, 197): 'World Cup'",MISC,Span,"[183, 187): '1998 World Cup'",,
+dev,125,"[188, 197): 'World Cup'",MISC,Span,"[183, 197): '1998 World Cup'",MISC,
 dev,126,"[105, 117): 'South Africa'",LOC,Tag,"[105, 117): 'South Africa'",ORG,Rugby team
 dev,126,"[2795, 2807): 'South Africa'",LOC,Tag,"[2795, 2807): 'South Africa'",ORG,Rugby team
 dev,126,"[3190, 3201): 'New Zealand'",LOC,Tag,"[3190, 3201): 'New Zealand'",ORG,Rugby team
@@ -246,8 +248,9 @@ dev,148,"[228, 244): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not c
 dev,148,"[376, 392): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 dev,148,"[514, 530): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 dev,148,"[1112, 1128): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-dev,149,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,
-dev,150,"[2463, 2470): 'Chicago'",LOC,Tag,"[2463, 2470): 'Chicago'",ORG,
+dev,149,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+dev,149,,,Missing,"[94, 102): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+dev,150,"[2463, 2470): 'Chicago'",LOC,Tag,"[2463, 2470): 'Chicago'",ORG,Baseball team
 dev,150,"[2533, 2540): 'Atlanta'",LOC,Tag,"[2533, 2540): 'Atlanta'",ORG,Atlanta Braves
 dev,150,"[3115, 3123): 'Montreal'",LOC,Tag,"[3115, 3123): 'Montreal'",ORG,Baseball team
 dev,150,"[3142, 3150): 'Montreal'",LOC,Tag,"[3142, 3150): 'Montreal'",ORG,Baseball team
@@ -315,13 +318,13 @@ dev,163,"[39, 45): 'BRAZIL'",LOC,Tag,"[39, 45): 'BRAZIL'",ORG,Soccer team
 dev,163,"[94, 109): 'The Netherlands'",LOC,Tag,"[94, 109): 'The Netherlands'",ORG,Soccer team
 dev,165,"[25, 45): 'TATTERSALLS BREEDERS'",MISC,Span,"[25, 52): 'TATTERSALLS BREEDERS STAKES'",MISC,
 dev,165,"[25, 45): 'TATTERSALLS BREEDERS'	",MISC,Span,"[25, 52): 'TATTERSALLS BREEDERS STAKES'	",,
-dev,165,"[93, 113): 'Tattersalls Breeders'",MISC,Sentence,"[93, 120): 'Tattersalls Breeders Stakes'",,
-dev,165,"[114, 120): 'Stakes'",MISC,Sentence,"[93, 120): 'Tattersalls Breeders Stakes'",MISC,"Sentence boundary between ""Breeders"" and ""Stakes"""
-dev,165,"[114, 120): 'Stakes'",,Wrong,,,See previous row
+dev,165,"[114, 120): 'Stakes'",MISC,Sentence,"[93, 120): 'Tattersalls Breeders Stakes'",,
+dev,165,"[93, 113): 'Tattersalls Breeders'",MISC,Sentence,"[93, 120): 'Tattersalls Breeders Stakes'",MISC,
+dev,165,"[114, 120): 'Stakes' ",MISC,Sentence,,,
 dev,166,"[163, 172): 'World Cup'",MISC,Span,"[158, 172): '1998 World Cup'",MISC,"[45, 59): '1998 WORLD CUP' tagged MISC in article title"
 dev,170,"[1363, 1373): 'Red Shirts'",MISC,Tag,"[1363, 1373): 'Red Shirts'",ORG,"""1860- Giuseppe Garibaldi leading his "" Red Shirts "" seized Naples in the Italian war of liberation against the Austrians"""
 dev,170,"[488, 494): 'Eugene'",ORG,Tag,"[488, 494): 'Eugene'",PER,
-dev,172,,,Missing,"[969, 982): 'Conservatives'",MISC,
+dev,172,,,Missing,"[969, 982): 'Conservatives'",MISC,Members of the Conservative party
 dev,175,"[252, 264): 'London-based'",MISC,Token,"[252, 258): 'London'",LOC,
 dev,178,,,Missing,"[105, 115): 'Afrikaners'",MISC,
 dev,178,"[105, 115): 'Afrikaners'",,Missing,,MISC,
@@ -338,9 +341,9 @@ dev,199,,,Missing,"[106, 122): 'Turkish-operated'",MISC,
 dev,199,"[139, 147): 'Bahraini'",LOC,Tag,"[139, 147): 'Bahraini'",MISC,
 dev,199,"[39, 47): 'Bahraini'",LOC,Tag,"[39, 47): 'Bahraini'",MISC,
 dev,200,,,Missing,"[1241, 1255): 'KDP-controlled'",MISC,
-dev,204,"[160, 171): 'Lilac Falls'",LOC,Span,"[160, 177): 'Lilac Falls Motel'",LOC,Motel is capitolized
+dev,204,"[160, 171): 'Lilac Falls'",LOC,Span,"[160, 177): 'Lilac Falls Motel'",LOC,
 dev,206,"[2266, 2273): 'Marines'",MISC,Tag,"[2266, 2273): 'Marines'",ORG,branch of millitary
-dev,206,"[458, 471): 'Mediterranean'",MISC,Tag,"[458, 471): 'Mediterranean'",LOC,"Fred: ""Enterprise was in the eastern Mediterranean"""
+dev,206,"[458, 471): 'Mediterranean'",MISC,Tag,"[458, 471): 'Mediterranean'",LOC,"""Enterprise was in the eastern Mediterranean"""
 dev,211,,,Missing,"[11, 15): 'Nato'",ORG,
 dev,214,"[1643, 1648): 'Oscar'",PER,Tag,"[1643, 1648): 'Oscar'",MISC,
 dev,214,,,Missing,"[75, 81): 'VENICE'",LOC,
@@ -387,7 +390,7 @@ test,4,"[527, 532): 'China'",LOC,Tag,"[527, 532): 'China'",ORG,Soccer team
 test,5,"[20, 28): 'PAKISTAN'",LOC,Tag,"[20, 28): 'PAKISTAN'",ORG,Cricket team
 test,5,"[213, 221): 'Pakistan'",LOC,Tag,"[213, 221): 'Pakistan'",ORG,team
 test,5,"[31, 42): 'NEW ZEALAND'",LOC,Tag,"[31, 42): 'NEW ZEALAND'",ORG,cricket team
-test,6,"[88, 110): 'English F.A. Challenge'",MISC,Sentence,"[88, 114): 'English F.A. Challenge Cup'",MISC,
+test,6,"[111, 114): 'Cup'",MISC,Sentence,"[88, 114): 'English F.A. Challenge Cup'",MISC,
 test,10,"[11, 22): 'RUGBY UNION'",ORG,Wrong,,,Generic description of a sport https://en.wikipedia.org/wiki/Rugby_union
 test,11,"[495, 503): 'Desvonde'",PER,Sentence,"[495, 509): 'Desvonde Botes'",PER,
 test,12,"[181, 190): 'Macedonia'",LOC,Tag,"[181, 190): 'Macedonia'",ORG,Soccer team
@@ -453,8 +456,6 @@ test,26,"[1166, 1174): 'PORTLAND'",LOC,Tag,"[1166, 1174): 'PORTLAND'",ORG,basket
 test,26,"[1186, 1198): 'GOLDEN STATE'",LOC,Tag,"[1186, 1198): 'GOLDEN STATE'",ORG,
 test,26,"[1210, 1219): 'LA LAKERS'",LOC,Tag,"[1210, 1219): 'LA LAKERS'",ORG,Basketball Team
 test,26,"[94, 102): 'National'",ORG,Sentence,"[94, 125): 'National Basketball Association'",MISC,Leagues should be tagged MISC
-test,26,"[236, 244): 'ATLANTIC'",LOC,Wrong,,,Conferences/divisions of leagues not considered entities
-test,26,"[822, 829): 'PACIFIC'",LOC,Wrong,,MISC,Conferences/divisions of leagues not considered entities
 test,27,"[11, 14): 'NFL'",ORG,Tag,"[11, 14): 'NFL'",MISC,Leagues should be tagged MISC
 test,27,"[1250, 1257): 'CHICAGO'",LOC,Tag,"[1250, 1257): 'CHICAGO'",ORG,Football team
 test,27,"[1271, 1281): 'CINCINNATI'",LOC,Tag,"[1271, 1281): 'CINCINNATI'",ORG,Football team
@@ -474,9 +475,10 @@ test,27,"[208, 216): 'AMERICAN'",MISC,Both,"[208, 236): 'AMERICAN FOOTBALL CONFE
 test,27,"[565, 573): 'X-DENVER'",MISC,Token,"[567, 573): 'DENVER'",ORG,
 test,27,"[889, 900): 'Y-GREEN BAY'",MISC,Token,"[891, 900): 'GREEN BAY'",ORG,"split on '-', Y"" is an annotation"""
 test,27,"[410, 412): 'PA'",ORG,Wrong,,,Points Allowed
+test,28,"[100, 106): 'League'",LOC,Tag,"[100, 106): 'League'",ORG,
 test,28,"[11, 14): 'NFL'",ORG,Tag,"[11, 14): 'NFL'",MISC,Leagues should be tagged MISC
-test,28,"[82, 90): 'National'",ORG,Sentence,"[82, 106): 'National Football League'",MISC,
-test,28,"[100, 106): 'League'",LOC,Sentence,"[82, 106): 'National Football League'",ORG,"Sentence boundary between ""Football"" and ""League"""
+test,28,"[82, 90): 'National'",ORG,Sentence,"[82, 106): 'National Football League'",ORG,
+test,28,"[91, 99): 'Football'",LOC,Tag,"[91, 99): 'Football'",ORG,
 test,29,"[220, 231): 'Rotary Club'",ORG,Span,"[220, 242): 'Rotary Club of Houston'",,
 test,29,"[25, 44): 'FOOTBALL-OHIO STATE'",MISC,Token,"[34, 44): 'OHIO STATE'",ORG,
 test,29,"[235, 242): 'Houston'",LOC,Wrong,,,
@@ -604,7 +606,7 @@ test,136,"[647, 657): 'Treasuries'",MISC,Wrong,,,"??? ""Returns on Treasuries"".
 test,137,"[313, 324): 'Bonny Light'",MISC,Tag,"[313, 324): 'Bonny Light'",ORG,brand? 
 test,137,"[341, 354): 'Arabian Light'",MISC,Tag,"[341, 354): 'Arabian Light'",ORG,Brand? 
 test,140,,,Missing,"[1565, 1581): 'Arafat-Netanyahu'",MISC,"It's an adjective used to describe the relation/time period between 2 people, hence the tag is MISC"
-test,142,"[342, 348): 'Kesers'",PER,Tag,"[342, 348): 'Kesers'",MISC,Two rival clans 
+test,142,"[342, 348): 'Kesers'",PER,Tag,"[342, 348): 'Kesers'",ORG,Two rival clans 
 test,142,"[353, 363): 'Karabuluts'",PER,Tag,"[353, 363): 'Karabuluts'",ORG,Clan name 
 test,146,"[11, 17): 'ACCESS'",MISC,Tag,"[11, 17): 'ACCESS'",ORG,Short fo NYMEX ACCESS
 test,146,"[143, 155): 'NYMEX ACCESS'",MISC,Tag,"[143, 155): 'NYMEX ACCESS'",ORG,Stock market 
@@ -617,8 +619,8 @@ test,149,,,Missing,"[902, 909): 'Western'",MISC,
 test,149,"[2233, 2241): 'Internet'",MISC,Wrong,,,
 test,149,"[3687, 3694): 'Network'",MISC,Wrong,,,
 test,149,"[2894, 2902): 'Internet'",MISC,Wrong,,,
-test,149,"[1100, 1108): 'Internet'",MISC,Wrong,,,
 test,149,"[3340, 3348): 'Internet'",MISC,Wrong,,,
+test,149,"[1100, 1108): 'Internet'",MISC,Wrong,,,
 test,149,"[155, 163): 'Internet'",MISC,Wrong,,,
 test,149,"[2448, 2456): 'Internet'",MISC,Wrong,,,
 test,149,"[3905, 3913): 'Internet'",MISC,Wrong,,,
@@ -637,10 +639,10 @@ test,158,"[69, 79): 'Muenchener'",MISC,Tag,"[69, 101): 'Muenchener Rueckversiche
 test,158,"[80, 101): 'Rueckversicherungs AG'  ",ORG,Span,"[69, 101): 'Muenchener Rueckversicherungs AG'",,insurance company
 test,158,"[69, 79): 'Muenchener'",MISC,Wrong,,,
 test,161,"[11, 24): 'John Lewis UK'",ORG,Span,"[11, 21): 'John Lewis'",ORG,John Lewis Partnership is a company that owns some stores in the UK
-test,161,"[11, 24): 'John Lewis UK'",ORG,Both,"[22, 24): 'UK'",LOC,John Lewis Partnership is a company that owns some stores in the UK
+test,161,,,Missing,"[22, 24): 'UK'",LOC,John Lewis Partnership is a company that owns some stores in the UK
 test,161,"[76, 86): 'John Lewis'",PER,Both,"[76, 98): 'John Lewis Partnership'",ORG,
 test,163,"[121, 133): 'Conservative'",MISC,Tag,"[121, 133): 'Conservative'",ORG,political party
-test,163,,,Missing,"[411, 424): 'Conservatives'",MISC,
+test,163,,,Missing,"[411, 424): 'Conservatives'",ORG,Conservative Party
 test,163,"[411, 424): 'Conservatives'  ",,Missing,,ORG,political party
 test,166,"[28, 32): 'Nats'",PER,Tag,"[28, 32): 'Nats'",ORG,National party
 test,166,"[41, 43): 'NZ'",LOC,Both,"[41, 49): 'NZ First'",ORG,Political party
@@ -692,7 +694,6 @@ test,190,"[440, 445): 'Italy'",LOC,Both,"[440, 447): 'Italy I'",ORG,Bobsleigh te
 test,191,"[11, 25): 'SKIING-CHINESE'",MISC,Token,"[18, 25): 'CHINESE'",LOC,
 test,192,"[11, 30): 'BOBSLEIGH-WORLD CUP'",MISC,Token,"[21, 30): 'WORLD CUP'",,
 test,192,"[808, 815): 'Garrett'",PER,Sentence,"[808, 821): 'Garrett Hines'",PER,
-test,193,"[744, 759): 'United Province'",LOC,Tag,"[744, 759): 'United Province'",ORG,"Fred: Somewhat ambiguous, but appears to refer to the United Province cricket team"
 test,194,"[21, 37): 'SKIING-WORLD CUP'",MISC,Token,"[28, 37): 'WORLD CUP'",,
 test,199,"[108, 124): 'Scottish premier'",MISC,Span,"[108, 116): 'Scottish'",MISC,Divisions of leagues not considered entities
 test,199,"[27, 52): 'SCOTTISH PREMIER DIVISION'",MISC,Span,"[27, 35): 'SCOTTISH'",MISC,Divisions of leagues not considered entities
@@ -724,7 +725,7 @@ test,214,"[474, 481): 'Albania'",LOC,Tag,"[474, 481): 'Albania'",ORG,Soccer team
 test,214,"[58, 67): 'N.IRELAND'",LOC,Tag,"[58, 67): 'N.IRELAND'",ORG,Soccer team
 test,215,"[1035, 1043): 'Victoria'",LOC,Tag,"[1035, 1043): 'Victoria'",ORG,Cricket team
 test,215,"[161, 169): 'Victoria'",LOC,Tag,"[161, 169): 'Victoria'",ORG,Cricket team
-test,215,"[310, 318): 'Victoria'",LOC,Tag,"[310, 318): 'Victoria'",ORG,team
+test,215,"[310, 318): 'Victoria'",LOC,Tag,"[310, 318): 'Victoria'",ORG,Cricket team
 test,215,"[987, 991): 'Pace'",PER,Wrong,,,https://en.wikipedia.org/wiki/Pace_bowling
 test,216,"[20, 36): 'SHEFFIELD SHIELD'",MISC,Tag,"[20, 36): 'SHEFFIELD SHIELD'",ORG,
 test,217,"[1024, 1033): 'Indonesia'",LOC,Tag,"[1024, 1033): 'Indonesia'",ORG,Soccer team
@@ -785,19 +786,16 @@ test,229,"[703, 711): 'Sporting'",ORG,Span,"[703,717): 'Sporting Gijon'",ORG,
 train,6,"[121, 137): 'Toronto Dominion'",PER,Tag,"[121, 137): 'Toronto Dominion'",ORG,TD Bank
 train,7,"[289, 291): '3M'",ORG,Wrong,,,3 Months
 train,11,"[485, 491): 'Rajavi'",MISC,Tag,"[485, 491): 'Rajavi'",PER,Massoud Rajavi
-train,24,"[562, 568): 'French'",MISC,Tag,"[562, 568): 'French'",LOC,"Could also be considered a tokenization error, in which case the entity should be [145, 151): 'Norway'"
 train,25,"[141, 151): 'mid-Norway'",MISC,Tag,"[141, 151): 'mid-Norway'",LOC,"Could also be considered a tokenization error, in which case the entity should be [145, 151): 'Norway'"
+train,25,"[141, 151): 'mid-Norway'",ORG,Tag,"[141, 151): 'mid-Norway'",LOC,"Could also be considered a tokenization error, in which case the entity should be [145, 151): 'Norway'"
 train,29,"[454, 458): 'Phil'",PER,Sentence,"[454, 468): 'Phil Mickelson'",PER,
 train,29,"[459, 468): 'Mickelson'",,Sentence,"[454, 468): 'Phil Mickelson'",,Sentence boundary between first and last name
 train,29,"[762, 766): 'Mark'",PER,Sentence,"[762, 774): 'Mark O'Meara'",PER,
 train,29,"[767, 774): 'O'Meara'",,Sentence,"[762, 774): 'Mark O'Meara'",,Sentence boundary between first and last name
 train,29,"[894, 902): 'Maruyama'",PER,Sentence,"[886, 902): 'Shigeki Maruyama'",PER,
-train,29,"[886, 893): 'Shigeki'",PER,Sentence,"[886, 902): 'Shigeki Maruyama'",,Sentence boundary between first and last name
 train,31,"[644, 655): 'Royal Ascot'",PER,Tag,"[644, 655): 'Royal Ascot'",MISC,https://en.wikipedia.org/wiki/Ascot_Racecourse#Royal_Ascot
-train,36,"[107, 114): 'English'",MISC,Span,"[107, 134): 'English County Championship'",MISC,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP' labeled as a single entity in the title"
-train,36,"[115, 134): 'County Championship'",MISC,Span,"[107, 134): 'English County Championship'",,
-train,36,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP'",MISC,Span,"[20, 27): 'ENGLISH'",MISC,First sentence of article correctly separates these two entities
-train,36,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP'",MISC,Span,"[28, 47): 'COUNTY CHAMPIONSHIP'",MISC,First sentence of article correctly separates these two entities
+train,36,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP'",MISC,Span,"[20, 27): 'ENGLISH'",MISC,The County Championship is an event held in England; see https://en.wikipedia.org/wiki/County_Championship
+train,36,,,Missing,"[28, 47): 'COUNTY CHAMPIONSHIP'",MISC,The County Championship is an event held in England; see https://en.wikipedia.org/wiki/County_Championship
 train,37,"[144, 151): 'England'",LOC,Tag,"[144, 151): 'England'",ORG,Cricket team
 train,37,"[156, 164): 'Pakistan'",LOC,Tag,"[156, 164): 'Pakistan'",ORG,Cricket team
 train,37,"[190, 197): 'England'",LOC,Tag,"[190, 197): 'England'",ORG,Cricket team
@@ -820,7 +818,8 @@ train,43,"[84, 106): 'European Cup Winners ''",MISC,Sentence,"[84, 110): 'Europe
 train,43,"[107, 110): 'Cup'",MISC,Sentence,"[84, 110): 'European Cup Winners ' Cup'",,"Sentence boundary between ""Winners"" and ""Cup"""
 train,47,"[223, 228): 'Hwang'",PER,Span,"[223, 235): 'Hwang Sun-ho'",PER,
 train,47,"[85, 94): 'Malaysian'",MISC,Sentence,"[85, 99): 'Malaysian Open'",MISC,
-train,48,"[157, 160): 'U.S'",LOC,Sentence,"[157, 184): 'U.S. National Tennis Centre'",LOC,
+train,48,"[157, 160): 'U.S'",LOC,Span,"[157, 161): 'U.S.'",LOC,Incorrect sentence boundary led to period being left off of abbreviation
+train,48,"[162, 184): 'National Tennis Centre'",LOC,Sentence,"[157, 184): 'U.S. National Tennis Centre'",LOC,
 train,50,"[1249, 1257): 'COLORADO'",LOC,Tag,"[1249, 1257): 'COLORADO'",ORG,Baseball team
 train,50,"[1272, 1279): 'ATLANTA'",LOC,Tag,"[1272, 1279): 'ATLANTA'",ORG,Baseball team
 train,50,"[1294, 1301): 'HOUSTON'",LOC,Tag,"[1294, 1301): 'HOUSTON'",ORG,Baseball team
@@ -838,7 +837,8 @@ train,50,"[1086, 1102): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues no
 train,50,"[375, 391): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,50,"[800, 816): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,50,"[947, 963): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-train,51,"[84, 96): 'Major League'",MISC,Sentence,"[84, 105): 'Major League Baseball'",MISC,
+train,51,"[84, 96): 'Major League'",MISC,Sentence,"[84, 105): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,51,,,Missing,"[97, 105): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,52,"[2054, 2063): 'Baltimore'",LOC,Tag,"[2054, 2063): 'Baltimore'",ORG,"""Baltimore has won seven of nineÉ"""
 train,52,"[4026, 4029): 'ERA'",MISC,Wrong,,,Earned run average
 train,52,"[4230, 4233): 'ERA'",MISC,Wrong,,,Earned run average
@@ -855,7 +855,7 @@ train,56,"[829, 838): 'Stuttgart'",LOC,Tag,"[829, 838): 'Stuttgart'",ORG,Soccer 
 train,56,"[859, 867): 'Lausanne'",LOC,Tag,"[859, 867): 'Lausanne'",ORG,Soccer team
 train,58,"[1096, 1102): 'Spence'",PER,Sentence,"[1090, 1102): 'Jamie Spence'",PER,
 train,58,"[1090, 1095): 'Jamie'",PER,Sentence,"[1090, 1102): 'Jamie Spence'",,Sentence boundary between first and last name
-train,58,"[275, 282): 'Woosnam'",PER,Sentence,"[271, 282): 'Ian Woosnam'",PER,
+train,58,"[271, 274): 'Ian'",PER,Sentence,"[271, 282): 'Ian Woosnam'",PER,
 train,58,"[327, 331): 'Mats'",PER,Sentence,"[327, 338): 'Mats Lanner'",PER,
 train,58,"[648, 652): 'Greg'",PER,Sentence,"[648, 661): 'Greg Chalmers'",PER,
 train,58,"[653, 661): 'Chalmers'",PER,Sentence,"[648, 661): 'Greg Chalmers'",,Sentence boundary between first and last name
@@ -866,7 +866,7 @@ train,60,"[144, 153): 'Australia'",LOC,Tag,"[144, 153): 'Australia'",ORG,Cricket
 train,60,"[254, 263): 'Australia'",LOC,Tag,"[254, 263): 'Australia'",ORG,Cricket team
 train,60,"[49, 60): 'AUSTRALIANS'",MISC,Tag,"[49, 60): 'AUSTRALIANS'",ORG,Cricket team
 train,60,"[613, 622): 'Australia'",LOC,Tag,"[613, 622): 'Australia'",ORG,Cricket team
-train,62,,,Missing,"[326, 328): 'OJ'",ORG,
+train,62,,,Missing,"[326, 328): 'OJ'",ORG,Official Journal
 train,70,,,Missing,"[306, 315): 'Soufriere'",LOC,City in Saint Lucia
 train,70,"[424, 432): 'Plymouth'",ORG,Tag,"[424, 432): 'Plymouth'",LOC,
 train,70,,,Missing,"[854, 874): 'Overseas Development'",ORG,Reference to Britain's Overseas Development Administration
@@ -911,7 +911,8 @@ train,144,"[510, 526): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,144,"[372, 388): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,144,"[806, 822): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,144,"[953, 969): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-train,145,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",MISC,
+train,145,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,145,,,Missing,"[96, 104): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,147,"[161, 167): 'Lisbon'",LOC,Tag,"[161, 167): 'Lisbon'",ORG,Soccer team
 train,158,"[676, 683): 'Michael'",PER,Sentence,"[676, 690): 'Michael Jonzon'",PER,
 train,158,"[831, 836): 'Wayne'",PER,Sentence,"[831, 842): 'Wayne Riley'",PER,
@@ -946,7 +947,7 @@ train,208,"[2962, 2980): 'Kalf, Voorhis & Co'",ORG,Sentence,"[2962, 2981): 'Kalf
 train,220,"[262, 270): 'Republic'",MISC,Tag,"[262, 270): 'Republic'",ORG,The Greek Republic
 train,220,,,Missing,"[377, 386): 'Socialist'",ORG,
 train,237,"[11, 21): 'Ford China'",ORG,Span,"[11, 15): 'Ford'",,"""Ford China JV"" ==> Ford China joint venture"
-train,237,"[11, 21): 'Ford China'",ORG,Both,"[16, 21): 'China'",LOC,"""Ford China JV"" ==> Ford China joint venture"
+train,237,,,Missing,"[16, 21): 'China'",LOC,"""Ford China JV"" ==> Ford China joint venture"
 train,245,"[11, 15): 'GOLF'",LOC,Wrong,,,
 train,247,"[11, 23): 'RUGBY LEAGUE'",MISC,Wrong,,,This appears to be a generic news category -- see document 344 also
 train,249,"[144, 151): 'England'",LOC,Tag,"[144, 151): 'England'",ORG,Cricket team
@@ -976,7 +977,8 @@ train,262,"[507, 523): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,262,"[807, 823): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,262,"[950, 966): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,262,"[1085, 1101): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-train,263,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,
+train,263,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,263,,,Missing,"[94, 102): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,283,"[866, 874): 'Florence'",LOC,Both,"[866, 883): 'Florence Chitauro'",PER,
 train,287,,,Missing,"[20, 30): 'Socialists'",ORG,Albania's oppositionï¿½Socialist Party
 train,287,"[610, 619): 'Democrats'",MISC,Tag,"[610, 619): 'Democrats'",ORG,Political party
@@ -1029,7 +1031,8 @@ train,345,"[542, 550): 'Tan Fook'",PER,Sentence,"[536, 550): 'Chong Tan Fook'",,
 train,346,"[207, 212): 'Lotte'",PER,Tag,"[207, 212): 'Lotte'",ORG,https://en.wikipedia.org/wiki/Lotte_Giants
 train,346,"[215, 220): 'Lotte'",PER,Tag,"[215, 220): 'Lotte'",ORG,https://en.wikipedia.org/wiki/Lotte_Giants
 train,346,"[243, 248): 'Lotte'",PER,Tag,"[243, 248): 'Lotte'",ORG,https://en.wikipedia.org/wiki/Lotte_Giants
-train,347,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,
+train,347,"[81, 93): 'Major League'",MISC,Sentence,"[81, 102): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,347,,,Missing,"[94, 102): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,348,"[1249, 1256): 'ATLANTA'",LOC,Tag,"[1249, 1256): 'ATLANTA'",ORG,Baseball team
 train,348,"[1271, 1279): 'COLORADO'",LOC,Tag,"[1271, 1279): 'COLORADO'",ORG,Baseball team
 train,348,"[1292, 1303): 'LOS ANGELES'",LOC,Tag,"[1292, 1303): 'LOS ANGELES'",ORG,Baseball team
@@ -1052,21 +1055,23 @@ train,348,"[809, 825): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,349,"[1001, 1010): 'Cleveland'",ORG,Tag,"[1001, 1010): 'Cleveland'",LOC,"""In Cleveland, Kevin Seitzer's two-out singleÉ"""
 train,349,"[2084, 2101): 'Triple-A Columbus'",ORG,Span,"[2084, 2092): 'Triple-A'",MISC,https://en.wikipedia.org/wiki/Triple-A_(baseball)
 train,349,"[2084, 2101): 'Triple-A Columbus'",ORG,Both,"[2093, 2101): 'Columbus'",ORG,https://en.wikipedia.org/wiki/Columbus_Clippers
-train,349,"[591, 611): 'Mariner Darren Bragg'",PER,Both,"[591, 598): 'Mariner'",MISC,Member of the Seattle Mariners
+train,349,,,Missing,"[591, 598): 'Mariner'",MISC,Member of the Seattle Mariners
 train,349,"[591, 611): 'Mariner Darren Bragg'",PER,Span,"[599, 611): 'Darren Bragg'",PER,
 train,349,"[763, 770): 'Seattle'",LOC,Tag,"[763, 770): 'Seattle'",ORG,"""a 9-5 victory over Seattle"""
-train,351,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",MISC,
+train,351,"[83, 95): 'Major League'",MISC,Sentence,"[83, 104): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,351,,,Missing,"[96, 104): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,352,"[29, 34): 'PORTO'",LOC,Tag,"[29, 34): 'PORTO'",ORG,Soccer team
 train,355,,,Missing,"[175, 185): 'Supercoppa'",MISC,
 train,359,"[386, 389): 'St.'",ORG,Span,"[386, 396): 'St. Gallen'",ORG,
 train,363,"[11, 15): 'GOLF'",LOC,Wrong,,,
-train,366,"[663, 666): 'RKC'",ORG,Sentence,"[663, 675): 'RKC Waalwijk'",ORG,
+train,366,"[667, 675): 'Waalwijk'",ORG,Sentence,"[663, 675): 'RKC Waalwijk'",ORG,"Sentence boundary between ""RKC"" and ""Waalwijk"""
 train,369,"[1086, 1095): 'Australia'",LOC,Tag,"[1086, 1095): 'Australia'",ORG,Cricket team
 train,369,"[567, 574): 'England'",LOC,Tag,"[567, 574): 'England'",ORG,Cricket team
 train,369,"[905, 913): 'Pakistan'",LOC,Tag,"[905, 913): 'Pakistan'",ORG,Cricket team
 train,370,"[11, 23): 'RUGBY LEAGUE'",MISC,Wrong,,,This appears to be a generic news category -- see document 344 also
 train,397,,,Missing,"[1434, 1444): 'Fahrenheit'",MISC,"Either mark this one as an entity *or* remove ""Celsius"" as a MISC entity in the same sentence."
-train,402,"[121, 126): '1,000'",MISC,Sentence,"[121, 138): '1,000 Lakes Rally'",MISC,
+train,402,"[121, 126): '1,000'",MISC,Sentence,"[121, 138): '1,000 Lakes Rally'",,"Sentence boundary between ""1,000"" and ""Lakes"""
+train,402,"[127, 138): 'Lakes Rally'",MISC,Sentence,"[121, 138): '1,000 Lakes Rally'",MISC,"Sentence boundary between ""1,000"" and ""Lakes"""
 train,412,"[1033, 1041): 'Pakistan'",LOC,Tag,"[1033, 1041): 'Pakistan'",ORG,Cricket team
 train,412,"[1266, 1274): 'Pakistan'",LOC,Tag,"[1266, 1274): 'Pakistan'",ORG,Cricket team
 train,412,"[1312, 1320): 'Pakistan'",LOC,Tag,"[1312, 1320): 'Pakistan'",ORG,Cricket team
@@ -1121,7 +1126,7 @@ train,458,"[1294, 1300): 'Nicola'",MISC,Wrong,,,
 train,458,"[363, 366): 'Col'",LOC,Wrong,,,Two kinds of wrong: Sentence boundary and title of person
 train,466,"[363, 366): 'Col'",LOC,Wrong,,,"Three kinds of wrong: Incorrect sentence boundary, title of person, tagged as LOC."
 train,470,"[236, 247): 'SIMEX Brent'",ORG,Span,"[236, 241): 'SIMEX'",ORG,"SIMEX is a market, and Brent crude is a commodity named after a location"
-train,470,"[236, 247): 'SIMEX Brent'",ORG,Both,"[242, 247): 'Brent'",MISC,"SIMEX is a market, and Brent crude is a commodity named after a location"
+train,470,,,Missing,"[242, 247): 'Brent'",MISC,"SIMEX is a market, and Brent crude is a commodity named after a location"
 train,470,"[87, 92): 'Brent'",ORG,Tag,"[87, 92): 'Brent'",MISC,Grade of crude oil named for a location (https://en.wikipedia.org/wiki/Brent_oilfield)
 train,473,"[584, 599): 'Prince Abdullah'",PER,Span,"[591, 599): 'Abdullah'",PER,
 train,484,"[1109, 1125): 'JohnÊHinckleyÊJr'",PER,Sentence,"[1109, 1126): 'JohnÊHinckleyÊJr.'",PER,Incorrect sentence boundary led to period being left off of abbreviation
@@ -1151,8 +1156,8 @@ train,520,"[24, 39): 'GRIQUALAND WEST'",LOC,Tag,"[24, 39): 'GRIQUALAND WEST'",OR
 train,520,"[330, 341): 'New Zealand'",LOC,Tag,"[330, 341): 'New Zealand'",ORG,Rugby team
 train,520,"[44, 55): 'NEW ZEALAND'",LOC,Tag,"[44, 55): 'NEW ZEALAND'",ORG,Rugby team
 train,520,"[64, 68): 'TOUR'",MISC,Wrong,,,Generic reference to a tour; see lede
-train,523,"[603, 609): 'Rovers'",ORG,Sentence,"[595, 609): 'Bristol Rovers'",,"Sentence boundary between ""Bristol"" and ""Rovers"""
 train,523,"[595, 602): 'Bristol'",ORG,Sentence,"[595, 609): 'Bristol Rovers'",ORG,"Sentence boundary between ""Bristol"" and ""Rovers"""
+train,523,"[603, 609): 'Rovers'",ORG,Sentence,"[595, 609): 'Bristol Rovers'",,"Sentence boundary between ""Bristol"" and ""Rovers"""
 train,524,"[1095, 1103): 'Pakistan'",LOC,Tag,"[1095, 1103): 'Pakistan'",ORG,Cricket team
 train,524,"[163, 170): 'England'",LOC,Tag,"[163, 170): 'England'",ORG,Cricket team
 train,524,"[20, 27): 'ENGLAND'",LOC,Tag,"[20, 27): 'ENGLAND'",ORG,Cricket team
@@ -1186,12 +1191,12 @@ train,530,"[228, 244): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,530,"[510, 526): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,530,"[813, 829): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,530,"[1091, 1107): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-train,532,"[1105, 1107): 'AL'",MISC,Span,"[1105, 1112): 'AL East'",MISC,
+train,532,"[1108, 1112): 'East'",MISC,Span,"[1105, 1112): 'AL East'",MISC,
 train,534,"[1234, 1244): 'Washington'",LOC,Tag,"[1234, 1244): 'Washington'",PER,Reference to a tennis player whose last name is Washington
-train,545,"[476, 479): 'Aki'",PER,Tag,"[476, 479): 'Aki'",ORG,"Cycling team; correctly tagged ORG at [805, 808): 'Aki'"
+train,545,"[476, 479): 'Aki'",PER,Tag,"[476, 479): 'Aki'",ORG,Cycling team (see context on surrounding lines)
 train,551,"[517, 522): 'Villa'",PER,Tag,"[517, 522): 'Villa'",ORG,
-train,553,"[3167, 3181): 'Arabised north'",LOC,Both,"[3167, 3175): 'Arabised'",MISC,Arabise: to give (someone or something) an Arab or Arabic character.
-train,553,"[3167, 3181): 'Arabised north'",LOC,Span,"[3176, 3181): 'north'",LOC,
+train,553,,,Missing,"[3167, 3175): 'Arabised'",MISC,Arabise: to give (someone or something) an Arab or Arabic character.
+train,553,"[3167, 3181): 'Arabised north'",LOC,Span,"[3176, 3181): 'north'",LOC,LOC
 train,566,,,Missing,"[47, 59): 'Commandments'",MISC,"[239, 255): 'Ten Commandments' annotated as MISC in first sentence of article"
 train,566,,,Missing,"[881, 887): 'Church'",ORG,Catholic Church
 train,567,"[53, 62): 'SAO PAULO'",PER,Tag,"[53, 62): 'SAO PAULO'",LOC,
@@ -1201,12 +1206,12 @@ train,581,"[266, 269): 'Rep'",MISC,Wrong,,,Doubly wrong: Incorrect sentence boun
 train,581,"[2387, 2390): 'Rep'",MISC,Wrong,,,Doubly wrong: Incorrect sentence boundary and title of person
 train,582,"[1158, 1164): 'Spring'",LOC,Wrong,,,"Spring wheat, a type of wheat"
 train,583,"[155, 183): 'Birmingham Public Park & Rec'",LOC,Tag,"[155, 183): 'Birmingham Public Park & Rec'",ORG,City government department
-train,583,"[35, 38): 'Ala'",LOC,Span,"[35, 39): 'Ala.'",,Comma immediately after period indicates period part of the abbreviation
+train,583,"[35, 38): 'Ala'",LOC,Sentence,"[35, 39): 'Ala.'",,Incorrect sentence boundary led to period being left off of abbreviation
 train,590,"[78, 99): 'Robert W. Baird & Co.'",ORG,Sentence,"[78, 106): 'Robert W. Baird & Co. , Inc.'",,"Sentence boundary between ""Co."" and "","""
 train,590,"[100, 106): ', Inc.'",ORG,Sentence,"[78, 106): 'Robert W. Baird & Co. , Inc.'",ORG,Sentence boundary between period and comma
-train,590,"[100, 106): ', Inc.'",ORG,Sentence,"[78, 106): 'Robert W. Baird & Co., Inc.'",ORG,
+train,590,"[78, 99): 'Robert W. Baird & Co.'",ORG,Sentence,"[78, 106): 'Robert W. Baird & Co., Inc.'",ORG,
 train,593,"[45, 57): 'France-Juppe'",MISC,Token,"[45, 51): 'France'",LOC,
-train,593,"[45, 57): 'France-Juppe'",MISC,Token,"[52, 57): 'Juppe'",PER,"Tokenizer treated ""France-Juppe"" as a single token"
+train,593,"[45, 57): 'France-Juppe'",MISC,Token,"[52, 57): 'Juppe'",PER,Alain Juppe
 train,594,"[1236, 1246): 'Eurotunnel'",LOC,Tag,"[1236, 1246): 'Eurotunnel'",ORG,Reference to the company that runs the Eurotunnel
 train,595,,,Missing,"[1148, 1165): 'Cultural Ministry'",ORG,
 train,596,"[1186, 1200): 'Pope John Paul'",PER,Span,"[1191, 1200): 'John Paul'",PER,Titles of persons not considered part of entities
@@ -1221,14 +1226,14 @@ train,608,,,Missing,"[517, 524): 'Hanover'",LOC,
 train,609,"[135, 143): 'Sudanese'",MISC,Both,"[135, 151): 'Sudanese Airways'",ORG,
 train,611,"[37, 42): 'Power'",ORG,Span,"[37, 52): 'Power Financial'",,Power Financial Corp
 train,623,"[238, 250): 'North Island'",PER,Tag,"[238, 250): 'North Island'",LOC,
-train,626,"[42, 59): 'disarmament-China'",MISC,Token,"[54, 59): 'China'",LOC,
+train,626,"[42, 59): 'disarmament-China'",MISC,Token,"[54, 59): 'China'",LOC,disarmament-China' treated as a single token
 train,636,"[22, 44): 'ROVERETO INTERNATIONAL'",MISC,Both,"[22, 30): 'ROVERETO'",LOC,"Description of an international athletics meeting held in Rovereto, Italy"
 train,637,"[1043, 1047): 'Mike'",PER,Sentence,"[1043, 1055): 'Mike Harwood'",,Sentence boundary between first and last name
 train,637,"[1048, 1055): 'Harwood'",PER,Sentence,"[1043, 1055): 'Mike Harwood'",PER,Sentence boundary between first and last name
-train,637,"[1100, 1105): 'Peter'",PER,Sentence,"[1100, 1116): 'Peter Teravainen'",,Sentence boundary between first and last name
 train,637,"[1106, 1116): 'Teravainen'",PER,Sentence,"[1100, 1116): 'Peter Teravainen'",PER,Sentence boundary between first and last name
-train,637,"[794, 800): 'Cevaer'",PER,Sentence,"[785, 800): 'Chistian Cevaer'",PER,Sentence boundary between first and last name
+train,637,"[1100, 1105): 'Peter'",PER,Sentence,"[1100, 1116): 'Peter Teravainen'",,Sentence boundary between first and last name
 train,637,"[785, 793): 'Chistian'",PER,Sentence,"[785, 800): 'Chistian Cevaer'",,Sentence boundary between first and last name
+train,637,"[794, 800): 'Cevaer'",PER,Sentence,"[785, 800): 'Chistian Cevaer'",PER,Sentence boundary between first and last name
 train,637,"[11, 15): 'GOLF'",LOC,Wrong,,,
 train,640,"[573, 576): 'Aki'",PER,Tag,"[573, 576): 'Aki'",ORG,Cycling team
 train,640,"[869, 872): 'Aki'",PER,Tag,"[869, 872): 'Aki'",ORG,Cycling team
@@ -1254,7 +1259,7 @@ train,663,"[1369, 1377): 'ST LOUIS'",LOC,Tag,"[1369, 1377): 'ST LOUIS'",ORG,Base
 train,663,"[1394, 1407): 'SAN FRANCISCO'",LOC,Tag,"[1394, 1407): 'SAN FRANCISCO'",ORG,Baseball team
 train,663,"[669, 676): 'DETROIT'",LOC,Tag,"[669, 676): 'DETROIT'",ORG,Baseball team
 train,663,"[690, 697): 'CHICAGO'",LOC,Tag,"[690, 697): 'CHICAGO'",ORG,Baseball team
-train,663,"[709, 718): 'BALTIMORE'",LOC,Tag,"[709, 718): 'BALTIMORE'",ORG,
+train,663,"[709, 718): 'BALTIMORE'",LOC,Tag,"[709, 718): 'BALTIMORE'",ORG,Baseball team
 train,663,"[732, 739): 'TORONTO'",LOC,Tag,"[732, 739): 'TORONTO'",ORG,Baseball team
 train,663,"[749, 760): 'KANSAS CITY'",LOC,Tag,"[749, 760): 'KANSAS CITY'",ORG,Baseball team
 train,663,"[771, 781): 'CALIFORNIA'",LOC,Tag,"[771, 781): 'CALIFORNIA'",ORG,Baseball team
@@ -1266,12 +1271,13 @@ train,663,"[513, 529): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,663,"[965, 981): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,663,"[1098, 1114): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,664,"[82, 94): 'Major League'",MISC,Sentence,"[82, 103): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,664,,,Missing,"[95, 103): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
 train,668,"[1238, 1246): 'Calderon'",LOC,Span,"[1230, 1246): 'Vicente Calderon'",LOC,https://en.wikipedia.org/wiki/Vicente_Calder%C3%B3n_Stadium
 train,668,"[1230, 1237): 'Vicente'",PER,Wrong,,,
-train,676,"[191, 198): 'Miladin'",PER,Sentence,"[191, 208): 'Miladin Becanovic'",,Sentence boundary between first and last name
 train,676,"[199, 208): 'Becanovic'",PER,Sentence,"[191, 208): 'Miladin Becanovic'",PER,Sentence boundary between first and last name
-train,676,"[377, 382): 'Scifo'",PER,Sentence,"[372, 382): 'Enzo Scifo'",PER,Sentence boundary between first and last name
+train,676,"[191, 198): 'Miladin'",PER,Sentence,"[191, 208): 'Miladin Becanovic'",,Sentence boundary between first and last name
 train,676,"[372, 376): 'Enzo'",PER,Sentence,"[372, 382): 'Enzo Scifo'",,Sentence boundary between first and last name
+train,676,"[377, 382): 'Scifo'",PER,Sentence,"[372, 382): 'Enzo Scifo'",PER,Sentence boundary between first and last name
 train,678,"[316, 322): 'Gerard'",PER,Sentence,"[316, 333): 'Gerard de Nooijer'",,Sentence boundary between first and last name
 train,678,"[323, 333): 'de Nooijer'",PER,Sentence,"[316, 333): 'Gerard de Nooijer'",PER,Sentence boundary between first and last name
 train,678,"[562, 572): 'Graafschap'",ORG,Sentence,"[562, 583): 'Graafschap Doetinchem'",,Sentence boundary between first and second part of name
@@ -1317,20 +1323,20 @@ train,778,"[63, 71): 'BRISBANE'",ORG,Tag,"[63, 71): 'BRISBANE'",LOC,Dateline of 
 train,780,"[627, 634): 'Son Sen'",LOC,Tag,"[627, 634): 'Son Sen'",PER,https://en.wikipedia.org/wiki/Son_Sen
 train,780,,,Missing,"[64, 77): 'ARANYAPRATHET'",LOC,
 train,780,"[778, 783): 'Khmer'",ORG,Tag,"[778, 783): 'Khmer'",MISC,"""the Khmer people"" ==> Cambodians"
-train,794,"[41, 47): 'Iberia'",ORG,Tag,"[41, 47): 'Iberia'",LOC,Iberian peninsula
+train,794,"[41, 47): 'Iberia'",ORG,Tag,"[41, 47): 'Iberia'",LOC,"""NATO military chiefs to visit Iberia."""
 train,796,"[74, 88): 'UNITED NATIONS'",ORG,Tag,"[74, 88): 'UNITED NATIONS'",LOC,"Dateline of article, indicating United Nations building in New York City"
 train,800,"[1108, 1115): 'Affleck'",PER,Sentence,"[1103, 1115): 'Paul Affleck'",PER,Sentence boundary between first and last name
 train,800,"[1103, 1107): 'Paul'",PER,Sentence,"[1103, 1115): 'Paul Affleck'",,Sentence boundary between first and last name
-train,800,"[483, 488): 'Davis'",PER,Sentence,"[478, 488): 'Mark Davis'",PER,Sentence boundary between first and last name
 train,800,"[478, 482): 'Mark'",PER,Sentence,"[478, 488): 'Mark Davis'",,Sentence boundary between first and last name
+train,800,"[483, 488): 'Davis'",PER,Sentence,"[478, 488): 'Mark Davis'",PER,Sentence boundary between first and last name
 train,800,"[552, 558): 'Retief'",PER,Sentence,"[552, 565): 'Retief Goosen'",,Sentence boundary between first and last name
 train,800,"[559, 565): 'Goosen'",PER,Sentence,"[552, 565): 'Retief Goosen'",PER,Sentence boundary between first and last name
 train,800,"[831, 834): 'Ian'",PER,Sentence,"[831, 842): 'Ian Woosnam'",,Sentence boundary between first and last name
 train,800,"[835, 842): 'Woosnam'",PER,Sentence,"[831, 842): 'Ian Woosnam'",PER,Sentence boundary between first and last name
 train,800,"[886, 890): 'Klas'",PER,Sentence,"[886, 899): 'Klas Eriksson'",,Sentence boundary between first and last name
 train,800,"[891, 899): 'Eriksson'",PER,Sentence,"[886, 899): 'Klas Eriksson'",PER,Sentence boundary between first and last name
-train,800,"[986, 992): 'Andrew'",PER,Sentence,"[986, 1000): 'Andrew Coltart'",,Sentence boundary between first and last name
 train,800,"[993, 1000): 'Coltart'",PER,Sentence,"[986, 1000): 'Andrew Coltart'",PER,Sentence boundary between first and last name
+train,800,"[986, 992): 'Andrew'",PER,Sentence,"[986, 1000): 'Andrew Coltart'",,Sentence boundary between first and last name
 train,800,"[11, 15): 'GOLF'",LOC,Wrong,,,
 train,803,"[786, 793): 'Lampros'",PER,Sentence,"[786, 806): 'Lampros Vasilopoulos'",,Sentence boundary between first and last name
 train,803,"[794, 806): 'Vasilopoulos'",PER,Sentence,"[786, 806): 'Lampros Vasilopoulos'",PER,Sentence boundary between first and last name
@@ -1342,7 +1348,7 @@ train,805,"[30, 38): 'PAKISTAN'",LOC,Tag,"[30, 38): 'PAKISTAN'",ORG,Cricket team
 train,805,"[671, 678): 'England'",LOC,Tag,"[671, 678): 'England'",ORG,Cricket team
 train,808,,,Missing,"[106, 125): 'county championship'	",MISC,https://en.wikipedia.org/wiki/County_Championship
 train,808,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP'",MISC,Span,"[20, 27): 'ENGLISH'",MISC,The County Championship is an event held in England
-train,808,"[20, 47): 'ENGLISH COUNTY CHAMPIONSHIP'",MISC,Span,"[28, 47): COUNTY CHAMPIONSHIP'",MISC,The County Championship is an event held in England
+train,808,,,Missing,"[28, 47): COUNTY CHAMPIONSHIP'",MISC,The County Championship is an event held in England
 train,817,"[1207, 1215): 'NEW YORK'",LOC,Tag,"[1207, 1215): 'NEW YORK'",ORG,Baseball team
 train,817,"[1227, 1234): 'HOUSTON'",LOC,Tag,"[1227, 1234): 'HOUSTON'",ORG,Baseball team
 train,817,"[1249, 1257): 'COLORADO'",LOC,Tag,"[1249, 1257): 'COLORADO'",ORG,Baseball team
@@ -1358,31 +1364,31 @@ train,817,"[234, 250): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not
 train,817,"[374, 390): 'CENTRAL DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,817,"[517, 533): 'WESTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
 train,817,"[765, 781): 'EASTERN DIVISION'",MISC,Wrong,,,Divisions of leagues not considered entities
-train,819,"[84, 96): 'Major League'",MISC,Sentence,"[84, 105): 'Major League Baseball'",,"Sentence boundary between ""League"" and ""Baseball"""
-train,821,"[690, 697): 'Atlanta'",LOC,Tag,"[690, 697): 'Atlanta'",ORG,Baseball team
+train,819,"[84, 96): 'Major League'",MISC,Sentence,"[84, 105): 'Major League Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,819,,,Missing,"[97, 105): 'Baseball'",MISC,"Sentence boundary between ""League"" and ""Baseball"""
+train,821,"[690, 697): 'Atlanta'",LOC,Tag,"[690, 697): 'Atlanta'",ORG,Atlanta Braves
 train,829,"[16, 23): 'EMBASSY'",MISC,Wrong,,,"Generic term ""embassy"", not tagged as an entity in the first sentence of the article"
 train,830,"[65, 67): 'AD'",ORG,Wrong,,,
-train,832,"[419, 427): 'EUROLIRA'",ORG,Tag,"[419, 427): 'EUROLIRA'",MISC,
+train,832,"[419, 427): 'EUROLIRA'",ORG,Tag,"[419, 427): 'EUROLIRA'",MISC,Name of a type of futures contract derived from names of currencies
 train,832,"[452, 461): 'EUROSWISS'",ORG,Tag,"[452, 461): 'EUROSWISS'",MISC,
 train,852,"[547, 576): 'Mayor Antonio Gonzalez Garcia'",PER,Span,"[553, 576): 'Antonio Gonzalez Garcia'",PER,Titles of persons not considered entities
 train,871,"[193, 204): 'MS-NBC News'",MISC,Tag,"[193, 204): 'MS-NBC News'",ORG,
 train,872,"[221, 239): 'CHICAGO AREA MILLS'",MISC,Both,"[221, 228): 'CHICAGO'",LOC,Generic mention of mills in the area of Chicago
 train,872,"[382, 389): 'DECATUR'",ORG,Tag,"[382, 389): 'DECATUR'",LOC,
 train,872,"[382, 389): 'DECATUR'",MISC,Tag,"[382, 389): 'DECATUR'",LOC,
-train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Span,"[395, 402): 'CLINTON'",LOC,
-train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Tag,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",LOC,
-train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Span,"[407, 419): 'CEDAR RAPIDS'",LOC,
+train,872,,,Missing,"[395, 402): 'CLINTON'",LOC,Two cities in Iowa
+train,872,"[395, 419): 'CLINTON AND CEDAR RAPIDS'",ORG,Both,"[407, 419): 'CEDAR RAPIDS'",LOC,Two cities in Iowa
 train,874,"[59, 65): 'RENNES'",ORG,Tag,"[59, 65): 'RENNES'",LOC,
 train,879,"[718, 724): 'Tigers'",ORG,Span,"[712, 724): 'Tamil Tigers'",ORG,
 train,880,"[50, 56): 'DENVER'",PER,Tag,"[50, 56): 'DENVER'",LOC,
-train,893,"[124, 130): 'Fowler'",PER,Span,"[118, 130): 'Wyche Fowler'",,
+train,893,"[124, 130): 'Fowler'",PER,Span,"[118, 130): 'Wyche Fowler'",PER,
 train,904,"[507, 514): 'Ajaccio'",ORG,Tag,"[507, 514): 'Ajaccio'",LOC,"""the island capital Ajaccio."""
 train,918,"[11, 24): 'INTERVIEW-T&N'",MISC,Token,"[21, 24): 'T&N'",ORG,Tokenizer treated 'INTERVIEW-T&N' as a single token
 train,919,"[112, 119): 'Richter'",PER,Tag,"[112, 119): 'Richter'",MISC,"Richter scale, not Richter the person"
 train,930,"[706, 707): '3'",ORG,Sentence,"[698, 707): 'CDU No. 3'",ORG,"Sentence boundary between ""No."" and ""3"""
 train,930,"[698, 705): 'CDU No.'",ORG,Sentence,"[698, 707): 'CDU No. 3'",,"Sentence boundary between ""No."" and 3"
-train,937,"[1649, 1652): 'Inc'",ORG,Sentence,"[1626, 1652): 'Goldman, Sachs and Co. Inc'",ORG,"Sentence boundary between ""Co."" and ""Inc."""
 train,937,"[1626, 1648): 'Goldman, Sachs and Co.'",ORG,Sentence,"[1626, 1652): 'Goldman, Sachs and Co. Inc'",,"Sentence boundary between ""Co."" and ""Inc"""
+train,937,"[1649, 1652): 'Inc'",ORG,Sentence,"[1626, 1652): 'Goldman, Sachs and Co. Inc'",ORG,"Sentence boundary between ""Co."" and ""Inc."""
 train,937,"[1649, 1652): 'Inc'",ORG,Sentence,"[1626, 1653): 'Goldman, Sachs and Co. Inc.'",,"Two incorrect sentence boundaries; one before ""Inc."" and one after ""Inc."""
 train,939,"[185, 190): 'Wales'",LOC,Tag,"[185, 190): 'Wales'",ORG,Soccer team
 train,939,"[19, 24): 'WALES'",LOC,Tag,"[19, 24): 'WALES'",ORG,Soccer team
