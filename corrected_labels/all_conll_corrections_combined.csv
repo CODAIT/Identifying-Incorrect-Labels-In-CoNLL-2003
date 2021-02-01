@@ -506,7 +506,7 @@ test,41,"[674, 682): 'Sporting'",ORG,Span,"[674, 688): 'Sporting Gijon'",ORG,
 test,42,"[19, 24): 'SPAIN'",LOC,Tag,"[19, 24): 'SPAIN'",ORG,Soccer team
 test,42,"[86, 91): 'Spain'",LOC,Tag,"[86, 91): 'Spain'",ORG,Soccer team
 test,44,"[260, 268): 'Mercedes'",MISC,Tag,"[260, 268): 'Mercedes'",ORG,brand
-test,45,"[1361, 1366): 'Czech'",LOC,Tag,"[1361, 1366): 'Czech'",MIC,
+test,45,"[1361, 1366): 'Czech'",LOC,Tag,"[1361, 1366): 'Czech'",MISC,
 test,49,"[31, 39): 'S.AFRICA'",MISC,Tag,"[31, 39): 'S.AFRICA'",LOC,
 test,49,"[57, 63): 'DURBAN'",PER,Tag,"[57, 63): 'DURBAN'",LOC,city
 test,50,"[1083, 1093): 'Communists'",MISC,Tag,"[1083, 1093): 'Communists'",ORG,Communist party

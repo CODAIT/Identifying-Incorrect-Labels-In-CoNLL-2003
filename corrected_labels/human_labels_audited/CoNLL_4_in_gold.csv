@@ -752,7 +752,7 @@ num_models,fold,doc_offset,corpus_span,corpus_ent_type,error_type,correct_span,c
 0,test,43,"[49, 53): 'WEAH'",PER,None,,,,,,
 3,test,44,"[260, 268): 'Mercedes'",MISC,None,,,Ambiguous: Brand used as adjective,,,
 0,test,44,"[28, 45): 'MANCHESTER UNITED'",ORG,None,,,,,,
-0,test,45,"[1361, 1366): 'Czech'",LOC,Tag,,MIC,,,,
+0,test,45,"[1361, 1366): 'Czech'",LOC,Tag,,MISC,,,,
 3,test,45,"[1653, 1662): 'Norwegian'",MISC,None,,,,,,
 2,test,45,"[179, 182): 'GMT'",MISC,None,,,,,,
 3,test,45,"[2082, 2091): 'Argentine'",MISC,None,,,,,,
