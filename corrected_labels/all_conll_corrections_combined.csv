@@ -351,11 +351,19 @@ test,0,"[1072, 1077): 'Syria'",LOC,Tag,"[1072, 1077): 'Syria'",ORG,Soccer team
 test,0,"[118, 123): 'Japan'",LOC,Tag,"[118, 123): 'Japan'",ORG,Soccer team
 test,0,"[1328, 1333): 'Syria'",LOC,Tag,"[1328, 1333): 'Syria'",ORG,Soccer team
 test,0,"[1528, 1533): 'Syria'",LOC,Tag,"[1528, 1533): 'Syria'",ORG,Soccer team
+test,0,"[1592, 1597): 'Japan'",LOC,Tag,"[1592, 1597): 'Japan'",ORG,Soccer team; see issue #38
+test,0,"[1749, 1754): 'Japan'",LOC,Tag,"[1749, 1754): 'Japan'",ORG,Soccer team; see issue #38
 test,0,"[19, 24): 'JAPAN'",LOC,Tag,"[19, 24): 'JAPAN'",ORG,Soccer team
+test,0,"[1928, 1933): 'Japan'",LOC,Tag,"[1928, 1933): 'Japan'",ORG,Soccer team; see issue #38
 test,0,"[196, 201): 'Syria'",LOC,Tag,"[196, 201): 'Syria'",ORG,Soccer team
+test,0,"[2056, 2059): 'UAE'",LOC,Tag,"[2056, 2059): 'UAE'",ORG,Soccer team; see issue #38
+test,0,"[2065, 2071): 'Kuwait'",LOC,Tag,"[2065, 2071): 'Kuwait'",ORG,Soccer team; see issue #38
+test,0,"[2076, 2087): 'South Korea'",LOC,Tag,"[2076, 2087): 'South Korea'",ORG,Soccer team; see issue #38
+test,0,"[2096, 2105): 'Indonesia'",LOC,Tag,"[2096, 2105): 'Indonesia'",ORG,Soccer team; see issue #38
 test,0,"[249, 254): 'China'",LOC,Tag,"[249, 254): 'China'",ORG,Soccer team
+test,0,"[363, 373): 'Uzbekistan'",LOC,Tag,"[363, 373): 'Uzbekistan'",ORG,Soccer team; see issue #38
 test,0,"[375, 380): 'China'",LOC,Tag,"[375, 380): 'China'",ORG,Soccer team
-test,0,"[40, 45): 'CHINA'",PER,Tag,"[40, 45): 'CHINA'",LOC,
+test,0,"[40, 45): 'CHINA'",PER,Tag,"[40, 45): 'CHINA'",ORG,Fred: Soccer team
 test,0,"[875, 885): 'Uzbekistan'",LOC,Tag,"[875, 885): 'Uzbekistan'",ORG,Soccer team
 test,0,"[982, 987): 'Japan'",LOC,Tag,"[982, 987): 'Japan'",ORG,Soccer team
 test,1,"[148, 156): 'Scotland'",LOC,Tag,"[148, 156): 'Scotland'",ORG,Rugby team
